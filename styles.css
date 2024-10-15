@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    background-color: #003F92;
+}
+
+.navbar {
+    position: fixed; /* Change to fixed positioning */
+    top: 20px; /* Initial position */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    width: 90%; /* Set a fixed width */
+    background-color: rgb(255, 255, 255); /* Slightly transparent */
+    padding: 15px 5%; /* Vertical and horizontal padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: top 1s, margin 1s, width 1s, padding 1s, border-radius 1s, box-shadow 1s; /* Smooth transitions */
+    z-index: 1000;
+    border-radius: 20px;
+    color: black;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar.scrolled {
+    background-color: rgb(255, 255, 255); /* Solid color when scrolled */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    top: 0; /* Keep at the top when scrolled */
+    border-radius: 0px; /* Remove border radius */
+    width: 100%;
+    padding: 15px 10%; /* Vertical and horizontal padding */
+}
+
+.hamburger {
+    font-size: 28px;
+    display: none; /* Hidden by default */
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    transition: transform 0.3s ease;
+    color: black;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 14px 20px;
+    transition: transform 0.1s; /* Smooth transition */
+    color: black;
+    position: relative;
+}
+
+.nav-links a:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+    background-color: #7bbbff46; /* Light background on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.content {
+    padding: 100px 20px; /* Space for the fixed navbar */
+}
+
+h1 {
+    margin: 50px 0;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#intro {
+    margin-top: 250px;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px; /* Below the navbar */
+        right: 0;
+        width: 100%;
+        background-color: rgba(51, 51, 51, 0.9);
+        flex-direction: column;
+        align-items: flex-end;
+        transform: translateY(-100%); /* Hide initially */
+    }
+    
+    .nav-links.active {
+        transform: translateY(0); /* Slide down */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+}

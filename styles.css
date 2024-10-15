@@ -8,6 +8,7 @@ body {
     font-family: 'Arial', sans-serif;
     scroll-behavior: smooth; /* Enable smooth scrolling */
     background-color: #003F92;
+    color: white;
 }
 
 .navbar {
@@ -119,6 +120,34 @@ body {
     justify-content: flex-end;
 }
 
+#whatwedo {
+    padding-top: 100px;
+}
+
+#whatwedo h2 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    display: flex;
+
+    justify-content: center;
+}
+
+#whatwedo h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+#whatwedo p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 250px 5px 250px;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .nav-links {
@@ -139,4 +168,77 @@ body {
     .hamburger {
         display: block; /* Show hamburger on mobile */
     }
+}
+
+.whatwedo-grid {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 50px;
+}
+
+.grid-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item .icon {
+    background-color: #003F92;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+}
+
+.grid-item img {
+    width: 30px; /* Adjust icon size */
+    height: 30px;
+}
+
+.grid-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #003F92;
+}
+
+.grid-item p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+.grid-item a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #003F92;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.grid-item a:hover {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }

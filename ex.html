@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lump Sum Package</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .pricing-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 600px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .features li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9em;
+        }
+
+        .features li:last-child {
+            border-bottom: none;
+        }
+
+        .checkmark {
+            color: #008000;
+        }
+
+        .crossmark {
+            color: #d32f2f;
+        }
+
+        .price {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #000;
+        }
+
+        .price span {
+            display: block;
+            font-size: 0.7em;
+            color: #777;
+        }
+
+        .cta-button {
+            background-color: #001f3f;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1em;
+            width: 100%;
+        }
+
+        .cta-button:hover {
+            background-color: #003366;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pricing-card">
+        <h2>LUMP SUM</h2>
+        <ul class="features">
+            <li><span>Design And Development</span> <span class="checkmark">✔</span></li>
+            <li><span>$25/mo Hosting</span> <span class="checkmark">✔</span></li>
+            <li><span>$100 fee Per Page after 5</span> <span class="checkmark">✔</span></li>
+            <li><span>+$50/mo Unlimited Edits Add-on</span> <span class="checkmark">✔</span></li>
+            <li><span>+$250 To Add A Blog</span> <span class="checkmark">✔</span></li>
+            <li><span>24/7 Support</span> <span class="crossmark">✖</span></li>
+            <li><span>Lifetime Updates</span> <span class="crossmark">✖</span></li>
+        </ul>
+        <div class="price">
+            <p>$3800 <span>+$25/mo Hosting</span></p>
+            <button class="cta-button">GET STARTED</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -27,6 +27,7 @@ body {
     z-index: 1000;
     border-radius: 20px;
     color: black;
+    font-size: 1.25rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
@@ -102,6 +103,8 @@ body {
     text-transform: uppercase;
     border: 1px solid black;
     border-radius: 5px;
+    background-color: #001f3f;
+    color: white;
     margin-top: 25px;
 }
 
@@ -287,6 +290,8 @@ p {
     text-transform: uppercase;
     border: 1px solid black;
     border-radius: 5px;
+    background-color: #001f3f;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -387,6 +392,8 @@ p {
     text-transform: uppercase;
     border: 1px solid black;
     border-radius: 5px;
+    background-color: #001f3f;
+    color: white;
 }
 
 #pricing {
@@ -407,6 +414,11 @@ p {
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
+    padding: 0 50px;
+    /* Optional: to ensure some padding around the layout */
+    box-sizing: border-box;
+    /* Ensures padding is included in width calculations */
+    flex-wrap: wrap;
 }
 
 #pricing-plans h3 {
@@ -417,14 +429,15 @@ p {
 
 #lump-sum,
 #monthly-plan {
-    margin: 0px 25px;
-    width: 100%;
+    margin: 20px;
+    width: 45%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: white;
     border-radius: 10px;
+    padding-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
@@ -460,6 +473,7 @@ p {
     margin-top: 20px;
     font-size: 1.5em;
     color: #000;
+    text-align: center;
 }
 
 .price span {
@@ -474,10 +488,12 @@ p {
     text-transform: uppercase;
     border: 1px solid black;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 25px;
+    background-color: #001f3f;
+    color: white;
+    width: 10vw;
+    text-align: center;
+    margin: 0 auto 25px auto;
+    display: block;
 }
 
 .cta-button:hover {

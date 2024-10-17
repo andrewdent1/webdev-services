@@ -60,3 +60,22 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+document.getElementById('appointment-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Collect form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+
+    // Perform form validation
+    if (name && email && phone && message) {
+        alert("Thank you for your message! We'll get back to you shortly.");
+        // Reset form
+        document.getElementById('appointment-form').reset();
+    } else {
+        alert("Please fill in all fields.");
+    }
+});

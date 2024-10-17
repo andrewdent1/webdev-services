@@ -127,3 +127,132 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    margin-top: 400px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.get-in-touch, .make-appointment {
+    flex: 1;
+    padding: 20px;
+}
+
+.get-in-touch {
+    margin-right: 20px;
+}
+
+.get-in-touch h3, .make-appointment h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #666;
+}
+
+.get-in-touch h1 {
+    font-size: 36px;
+    color: #222;
+}
+
+.get-in-touch p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    padding-right: 25px;
+}
+
+.contact-details {
+    margin-top: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-item img {
+    width: 40px;
+    margin-right: 15px;
+}
+
+.contact-item h4 {
+    font-size: 16px;
+    margin: 0;
+    color: #222;
+}
+
+.contact-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+.make-appointment {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.make-appointment form {
+    display: flex;
+    flex-direction: column;
+}
+
+.make-appointment label {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.make-appointment input, .make-appointment textarea {
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.make-appointment button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #001f3f;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.make-appointment button:hover {
+    background-color: #00132b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .get-in-touch, .make-appointment {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .get-in-touch {
+        margin-bottom: 30px;
+    }
+
+    .make-appointment {
+        width: 100%;
+    }
+}

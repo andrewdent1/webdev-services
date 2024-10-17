@@ -127,3 +127,76 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+#main h2 {
+    display: flex;
+    justify-content: center;
+    margin: 500px 50px 25px 50px;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+#main p {
+    display: flex;
+    justify-content: center;
+    margin: 0px 150px 20px 150px;
+    text-align: center;
+}
+
+#why {
+    padding: 100px 150px;
+    display: flex;
+    justify-content: center;
+}
+
+#why-text h3 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding-bottom: 15px;
+}
+
+#why-text ul {
+    font-size: 1.25rem;
+}
+
+#why-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+#why-img img {
+    width: 50vw;
+    height: 25vh;
+    margin: 0 auto;
+}
+
+#list {
+    padding-left: 20px;
+}
+
+.list-item {
+    padding-bottom: 10px;
+}
+
+#reasons-section {
+    display: flex;
+    padding: 0 150px;
+}
+
+#reasons-img img {
+    width: 15vw;
+    height: 75vh;
+    margin-right: 100px;
+}
+
+.reason h4 {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+.reason p {
+    padding-bottom: 50px;
+}

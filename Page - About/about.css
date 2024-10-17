@@ -99,7 +99,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 250px 50px 100px 50px;
+    padding: 250px 50px 50px 50px;
 }
 
 #intro-text {
@@ -111,7 +111,6 @@ body {
     font-weight: 500;
     text-transform: uppercase;
     padding-bottom: 25px;
-
 }
 
 #intro p {
@@ -149,4 +148,42 @@ body {
     color: white;
     transform: scale(1.05);
     transition: transform 0.5s, color 0.5s, background-color 0.5s;
+}
+
+#process {
+    background-color: #e1e5f2;
+    padding: 100px;
+}
+
+#process h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 25px;
+}
+
+#process-text p {
+    padding-bottom: 40px;
+}
+
+#process-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#process-steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0px 100px;
+    margin: 0px 50px;
+}
+
+.process-step {
+    background-color: #eaebf0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    padding: 50px 100px;
+    margin: 0px 50px;
 }

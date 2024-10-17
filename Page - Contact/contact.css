@@ -70,3 +70,27 @@ body {
     color: white;
     border-radius: 5px;
 }
+
+.half-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 50vh;
+    background-color: #022b3a; /* Replace with your desired color */
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    overflow: hidden;
+}
+
+.half-circle-text {
+    color: white; /* Change to your desired text color */
+    font-size: 4em; /* Adjust as needed */
+    padding: 20px; /* Optional padding */
+    margin: 25vh 0 0 0;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

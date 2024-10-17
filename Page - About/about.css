@@ -11,7 +11,7 @@ body {
 }
 
 .navbar {
-    position: fixed;
+    position: absolute;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
@@ -69,4 +69,84 @@ body {
     background-color: #022b3a;
     color: white;
     border-radius: 5px;
+}
+
+.half-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 50vh;
+    background-color: #022b3a; /* Replace with your desired color */
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    overflow: hidden;
+}
+
+.half-circle-text {
+    color: white; /* Change to your desired text color */
+    font-size: 4em; /* Adjust as needed */
+    padding: 20px; /* Optional padding */
+    margin: 25vh 0 0 0;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 250px 50px 100px 50px;
+}
+
+#intro-text {
+    padding-right: 50px;
+}
+
+#intro h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 25px;
+
+}
+
+#intro p {
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding-bottom: 25px;
+}
+
+#intro-img {
+    width: 40vw;
+}
+
+#intro-img img {
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+#intro-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    color: #001f3f;
+    width: 10vw;
+    text-align: center;
+    margin: 15px auto 25px 10px;
+    scale: 1.1;
+}
+
+#intro-button:hover {
+    background-color: #001f3f;
+    color: white;
+    transform: scale(1.05);
+    transition: transform 0.5s, color 0.5s, background-color 0.5s;
 }

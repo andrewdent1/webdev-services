@@ -135,7 +135,7 @@ body {
 }
 
 #whatwedo {
-    padding-bottom: 100px;
+    padding-bottom: 175px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -189,21 +189,22 @@ body {
     padding-top: 50px;
 }
 
-#promise {
+#key-features {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .whatwedo-grid {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
-    padding: 35px 0px 150px 0px;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0px 0px 100px 0px;
 }
 
 .grid-container {
@@ -341,12 +342,18 @@ p {
     margin: 5px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer h4 {
+    padding-bottom: 10px;
 }
 
 .offer:hover {
@@ -517,8 +524,9 @@ p {
 .animated-gradient {
     z-index: -1000;
     position: absolute;
+    background-size: cover;
     width: 100%;
-    min-height: 85vh;
+    height: 100%;
     padding: 35px 0px 150px 0px;
     background: linear-gradient(270deg, #022b3a67, #bfdbf7, #e1e5f2);
     background-size: 600% 600%;

@@ -54,6 +54,8 @@ body {
     display: flex;
     transition: transform 0.3s ease;
     color: black;
+    justify-content: center; /* Center the items in the nav-links container */
+    align-items: center;
 }
 
 .nav-links a {
@@ -69,6 +71,37 @@ body {
     background-color: #022b3a;
     color: white;
     border-radius: 5px;
+}
+
+.dropdown {
+    position: relative; /* Positioning context for dropdown */
+}
+
+.dropdown-content {
+    display: none; /* Initially hide the dropdown content */
+    position: absolute; /* Position it absolutely to the parent */
+    background-color: white; /* Background color of the dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Ensure dropdown is above other elements */
+    margin-top: 10px; /* Add some spacing from the button */
+    border-radius: 5px; /* Optional: add border radius */
+}
+
+.dropdown-content a {
+    color: black; /* Link color */
+    padding: 10px 20px; /* Padding for dropdown links */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Display links as blocks */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown-content a:hover {
+    background-color: #022b3a; /* Highlight on hover */
+    color: white; /* Change text color on hover */
+    border: 1px solid white;
 }
 
 .half-circle {
@@ -186,4 +219,33 @@ body {
     border-radius: 25px;
     padding: 50px 100px;
     margin: 0px 50px;
+}
+
+#testimonials {
+    padding: 100px 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+#testimonials h2 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+#coming-soon {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    padding: 50px 100px;
+    margin: 50px 350px 0px 350px;
+    border: 1px solid #001f3f;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: #e1e5f2;
 }

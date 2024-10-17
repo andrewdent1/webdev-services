@@ -11,7 +11,7 @@ body {
 }
 
 .navbar {
-    position: fixed;
+    position: absolute;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
@@ -54,6 +54,8 @@ body {
     display: flex;
     transition: transform 0.3s ease;
     color: black;
+    justify-content: center; /* Center the items in the nav-links container */
+    align-items: center;
 }
 
 .nav-links a {
@@ -69,6 +71,37 @@ body {
     background-color: #022b3a;
     color: white;
     border-radius: 5px;
+}
+
+.dropdown {
+    position: relative; /* Positioning context for dropdown */
+}
+
+.dropdown-content {
+    display: none; /* Initially hide the dropdown content */
+    position: absolute; /* Position it absolutely to the parent */
+    background-color: white; /* Background color of the dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Ensure dropdown is above other elements */
+    margin-top: 10px; /* Add some spacing from the button */
+    border-radius: 5px; /* Optional: add border radius */
+}
+
+.dropdown-content a {
+    color: black; /* Link color */
+    padding: 10px 20px; /* Padding for dropdown links */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Display links as blocks */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown-content a:hover {
+    background-color: #022b3a; /* Highlight on hover */
+    color: white; /* Change text color on hover */
+    border: 1px solid white;
 }
 
 .half-circle {

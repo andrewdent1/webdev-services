@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Navbar</title>
-    <link rel="stylesheet" href="services.css">
+    <title>FAQ Section</title>
+    <link rel="stylesheet" href="faq.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
         rel="stylesheet">
 </head>
-
 <body>
     <div class="navbar-container"></div>
     <div class="navbar" id="navbar">
@@ -32,12 +30,24 @@
         </div>
     </div>
 
-
     <div class="half-circle">
-        <h1 class="half-circle-text">Services</h1>
+        <h1 class="half-circle-text">Frequently Asked Questions</h1>
     </div>
 
-    <script src="services.js"></script>
-</body>
+    <div id="faq-head">
+        <h1>Frequently Asked Questions</h1>
+        <p>Browse our FAQ page for answers to everything you would like to know about what we do, what we charge, our process, and how everything works.</p>
+    </div>
 
+    <div class="faq-category">
+        <button onclick="showFAQs('pricing')">Pricing & Payments</button>
+        <button onclick="showFAQs('plans')">Plans</button>
+        <button onclick="showFAQs('seo')">SEO</button>
+        <button onclick="showFAQs('websites')">Websites</button>
+    </div>
+    
+    <div id="faq-container"></div>
+
+    <script src="faq.js"></script>
+</body>
 </html>

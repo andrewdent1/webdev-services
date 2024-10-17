@@ -60,3 +60,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+document.querySelector('.wow-button').addEventListener('click', function (e) {
+    const button = e.currentTarget;
+
+    // Create a span element to act as the ripple
+    const ripple = document.createElement('span');
+    const size = Math.max(button.offsetWidth, button.offsetHeight);
+    const x = e.pageX - button.offsetLeft - size / 2;
+    const y = e.pageY - button.offsetTop - size / 2;
+
+    ripple.style.width = ripple.style.height = `${size}px`;
+    ripple.style.left = `${x}px`;
+    ripple.style.top = `${y}px`;
+    ripple.classList.add('ripple');
+
+    // Add ripple to the button
+    button.appendChild(ripple);
+
+    // Remove ripple after animation ends
+    setTimeout(() => {
+        ripple.remove();
+    }, 600); // Duration matches CSS animation
+});

@@ -8,7 +8,6 @@ body {
     font-family: 'DM Sans', sans-serif;
     scroll-behavior: smooth;
     /* Enable smooth scrolling */
-    background-color: #e1e5f2;
     color: #022b3a;
 }
 
@@ -68,16 +67,18 @@ body {
 
 .nav-links a:hover {
     transform: scale(1.1);
-    background-color: #7bbbff46;
+    background-color: #022b3a;
+    color: white;
     border-radius: 5px;
 }
 
 #intro {
-    margin: 250px 0px 100px 0px;
-    padding: 0PX 100px 100px 100px;
+    margin: 0px 0px 100px 0px;
+    padding: 250PX 0px 100px 100px;
     display: flex;
     align-items: center;
     max-height: 100vh;
+    background-color: #e1e5f2;
 }
 
 #intro h2 {
@@ -97,23 +98,34 @@ body {
     font-size: 1.25rem;
 }
 
-#intro button {
+.wow-button {
     padding: 10px 20px;
     font-size: 1rem;
     text-transform: uppercase;
     border: 1px solid black;
     border-radius: 5px;
+    background-color: #e1e5f2;
+    color: #001f3f;
+    width: 10vw;
+    text-align: center;
+    margin: 10px auto 25px 10px;
+    scale: 1.1;
+}
+
+.wow-button:hover {
     background-color: #001f3f;
     color: white;
-    margin-top: 25px;
+    transform: scale(1.05);
+    transition: transform 0.5s, color 0.5s, background-color 0.5s;
 }
+
 
 #intro-text {
     width: 50vw;
 }
 
 #intro-img {
-    width: 50vw;
+    width: 80vw;
     justify-content: flex-end;
 }
 
@@ -123,8 +135,10 @@ body {
 }
 
 #whatwedo {
-    padding-top: 50px;
-    background-color: #e1e5f2;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #whatwedo h1 {
@@ -139,16 +153,10 @@ body {
 }
 
 #no {
-    margin-bottom: 25px;
     font-size: 1.5rem;
     font-weight: 500;
-}
-
-#whatwedo p {
     display: flex;
     justify-content: center;
-    text-align: center;
-    padding: 10px 350px 0px 350px;
 }
 
 /* Responsive Styles */
@@ -177,12 +185,24 @@ body {
     }
 }
 
+#promise-div {
+    padding-top: 50px;
+}
+
+#promise {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
 .whatwedo-grid {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
-    background-color: #e1e5f2;
     padding: 35px 0px 150px 0px;
 }
 
@@ -284,21 +304,6 @@ p {
     padding: 0px 0px 30px 0px;
 }
 
-#what-we-offer button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: #001f3f;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25%;
-    margin: 35px auto 0;
-}
-
 #about-details {
     display: flex;
     flex-direction: row;
@@ -349,11 +354,36 @@ p {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
+#what-we-offer button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    color: #001f3f;
+    width: 10vw;
+    text-align: center;
+    margin: 35px auto 25px auto;
+    scale: 1.1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#what-we-offer button:hover {
+    background-color: #001f3f;
+    color: white;
+    transform: scale(1.05);
+    transition: transform 0.5s, color 0.5s, background-color 0.5s;
+}
+
 #portfolio {
     padding: 100px 50px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: #e1e5f2;
 }
 
 #portfolio h2 {
@@ -364,36 +394,17 @@ p {
     font-weight: 500;
 }
 
-#portfolio-info {
-    display: flex;
-    justify-content: center;
-}
-
-.portfolio-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.portfolio-item h3 {
-    font-weight: 500;
-    font-size: 1.25rem;
-}
-
-.portfolio-item img {
-    max-width: 75%;
-    margin-bottom: 20px;
-}
-
-.portfolio-item button {
-    padding: 10px 20px;
-    font-size: 1rem;
+#coming-soon {
     text-transform: uppercase;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: #001f3f;
-    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 50px 100px;
+    margin: 50px 350px 0px 350px;
+    border: 1px solid #001f3f;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: white;
 }
 
 #pricing {
@@ -488,8 +499,8 @@ p {
     text-transform: uppercase;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: #001f3f;
-    color: white;
+    background-color: white;
+    color: #001f3f;
     width: 10vw;
     text-align: center;
     margin: 0 auto 25px auto;
@@ -497,5 +508,33 @@ p {
 }
 
 .cta-button:hover {
-    background-color: #003366;
+    background-color: #001f3f;
+    color: white;
+    transform: scale(1.05);
+    transition: transform 0.5s, color 0.5s, background-color 0.5s;
+}
+
+.animated-gradient {
+    z-index: -1000;
+    position: absolute;
+    width: 100%;
+    min-height: 85vh;
+    padding: 35px 0px 150px 0px;
+    background: linear-gradient(270deg, #022b3a67, #bfdbf7, #e1e5f2);
+    background-size: 600% 600%;
+    animation: gradientShift 7.5s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }

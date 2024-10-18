@@ -204,14 +204,14 @@ body {
 
 #process {
     background-color: #e1e5f2;
-    padding: 100px;
+    padding: 150px 75px;
 }
 
 #process h2 {
     font-size: 2rem;
     font-weight: 500;
     text-transform: uppercase;
-    padding-bottom: 25px;
+    padding-bottom: 75px;
 }
 
 #process-text p {
@@ -228,16 +228,27 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 0px 100px;
-    margin: 0px 50px;
+    padding: 0px 10px;
+    margin: 0px 10px;
 }
 
 .process-step {
     background-color: #eaebf0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
-    padding: 50px 100px;
-    margin: 0px 50px;
+    padding: 50px 20px;
+    margin: 0px 25px;
+}
+
+.process-step h4 {
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    color: #565656;
+}
+
+.process-step h3 {
+    padding-bottom: 10px;
+    font-size: 1.25rem;
 }
 
 #testimonials {

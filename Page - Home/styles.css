@@ -183,7 +183,7 @@ body {
 }
 
 #whatwedo {
-    padding-bottom: 175px;
+    padding: 50px 0 100px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -252,7 +252,8 @@ body {
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    padding: 0px 0px 100px 0px;
+    padding: 100px 0px 100px 0px;
+    background-color: #e1e5f2;
 }
 
 .grid-container {
@@ -295,7 +296,7 @@ body {
 }
 
 .grid-item p {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: #555;
     line-height: 1.4;
 }
@@ -318,6 +319,10 @@ body {
 .grid-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    background-image: url(Images/unnamed.png);
+    background-blend-mode: multiply;
+    /* Layer the background image with the color */
+    background-color: #ff0000;
 }
 
 #about-section {
@@ -386,7 +391,8 @@ p {
 
 .offer {
     width: 100%;
-    height: 20vh;
+    min-height: 20vh;
+    /* Allow height to grow if content requires more space */
     margin: 5px;
     display: flex;
     justify-content: center;
@@ -398,6 +404,12 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    word-wrap: break-word;
+    /* Ensures long words are wrapped */
+    overflow-wrap: break-word;
+    /* For modern browsers */
+    box-sizing: border-box;
+    /* Ensures padding and borders are included in width calculation */
 }
 
 .offer h4 {
@@ -567,32 +579,6 @@ p {
     color: white;
     transform: scale(1.05);
     transition: transform 0.5s, color 0.5s, background-color 0.5s;
-}
-
-.animated-gradient {
-    z-index: -1000;
-    position: absolute;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    padding: 35px 0px 150px 0px;
-    background: linear-gradient(270deg, #022b3a67, #bfdbf7, #e1e5f2);
-    background-size: 600% 600%;
-    animation: gradientShift 7.5s ease infinite;
-}
-
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 @media (max-width: 1024px) {

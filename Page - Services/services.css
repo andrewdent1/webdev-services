@@ -54,7 +54,8 @@ body {
     display: flex;
     transition: transform 0.3s ease;
     color: black;
-    justify-content: center; /* Center the items in the nav-links container */
+    justify-content: center;
+    /* Center the items in the nav-links container */
     align-items: center;
 }
 
@@ -74,33 +75,47 @@ body {
 }
 
 .dropdown {
-    position: relative; /* Positioning context for dropdown */
+    position: relative;
+    /* Positioning context for dropdown */
 }
 
 .dropdown-content {
-    display: none; /* Initially hide the dropdown content */
-    position: absolute; /* Position it absolutely to the parent */
-    background-color: white; /* Background color of the dropdown */
+    display: none;
+    /* Initially hide the dropdown content */
+    position: absolute;
+    /* Position it absolutely to the parent */
+    background-color: white;
+    /* Background color of the dropdown */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1; /* Ensure dropdown is above other elements */
-    margin-top: 10px; /* Add some spacing from the button */
-    border-radius: 5px; /* Optional: add border radius */
+    z-index: 1;
+    /* Ensure dropdown is above other elements */
+    margin-top: 10px;
+    /* Add some spacing from the button */
+    border-radius: 5px;
+    /* Optional: add border radius */
 }
 
 .dropdown-content a {
-    color: black; /* Link color */
-    padding: 10px 20px; /* Padding for dropdown links */
-    text-decoration: none; /* Remove underline */
-    display: block; /* Display links as blocks */
+    color: black;
+    /* Link color */
+    padding: 10px 20px;
+    /* Padding for dropdown links */
+    text-decoration: none;
+    /* Remove underline */
+    display: block;
+    /* Display links as blocks */
 }
 
 .dropdown:hover .dropdown-content {
-    display: block; /* Show dropdown on hover */
+    display: block;
+    /* Show dropdown on hover */
 }
 
 .dropdown-content a:hover {
-    background-color: #022b3a; /* Highlight on hover */
-    color: white; /* Change text color on hover */
+    background-color: #022b3a;
+    /* Highlight on hover */
+    color: white;
+    /* Change text color on hover */
     border: 1px solid white;
 }
 
@@ -111,16 +126,20 @@ body {
     transform: translateX(-50%);
     width: 100vw;
     height: 50vh;
-    background-color: #022b3a; /* Replace with your desired color */
+    background-color: #022b3a;
+    /* Replace with your desired color */
     border-bottom-left-radius: 100%;
     border-bottom-right-radius: 100%;
     overflow: hidden;
 }
 
 .half-circle-text {
-    color: white; /* Change to your desired text color */
-    font-size: 4em; /* Adjust as needed */
-    padding: 20px; /* Optional padding */
+    color: white;
+    /* Change to your desired text color */
+    font-size: 4em;
+    /* Adjust as needed */
+    padding: 20px;
+    /* Optional padding */
     margin: 25vh 0 0 0;
     text-transform: uppercase;
     display: flex;
@@ -199,4 +218,107 @@ body {
 
 .reason p {
     padding-bottom: 50px;
+}
+
+
+.footer {
+    background-color: #022b3a;
+    color: #ffffff;
+    padding: 100px 0 50px 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.footer-section-1 {
+    max-width: 30vw;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-tagline {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #cccccc;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #0f2a44;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.more-links {
+    margin-left: -125px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #ffffff;
+}
+
+.footer-bottom p {
+    color: #cccccc;
+}
+
+.footer-bottom ul {
+    display: flex;
+    list-style: none;
+}
+
+.footer-bottom ul li {
+    margin-left: 20px;
+}
+
+.footer-bottom ul li a {
+    color: #cccccc;
+    text-decoration: none;
 }

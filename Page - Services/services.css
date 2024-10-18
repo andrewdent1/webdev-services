@@ -202,7 +202,7 @@ body {
 
 #reasons-section {
     display: flex;
-    padding: 0 150px;
+    padding: 0 150px 100px 150px;
 }
 
 #reasons-img img {

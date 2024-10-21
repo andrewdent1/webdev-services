@@ -9,6 +9,8 @@ body {
     scroll-behavior: smooth;
     /* Enable smooth scrolling */
     color: #022b3a;
+    width: 100%;
+    height: 100%;
 }
 
 .navbar {
@@ -160,16 +162,6 @@ body {
 
 #intro-text {
     width: 70vw;
-}
-
-#intro-img {
-    width: 60vw;
-    justify-content: flex-end;
-}
-
-#intro-img img {
-    max-width: 100%;
-    justify-content: flex-end;
 }
 
 #whatwedo {
@@ -579,7 +571,7 @@ p {
     padding: 100px 0 50px 0;
 }
 
-.container {
+.footer-container {
     width: 90%;
     margin: 0 auto;
     max-width: 1200px;

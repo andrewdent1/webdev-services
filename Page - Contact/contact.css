@@ -29,6 +29,11 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
+.logo img {
+    width: 200px;
+    padding-top: 10px;
+}
+
 .navbar-container {
     display: flex;
     justify-content: center;

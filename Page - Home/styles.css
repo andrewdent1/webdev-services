@@ -130,7 +130,7 @@ body {
     padding: 250PX 0px 100px 100px;
     display: flex;
     align-items: center;
-    max-height: 100vh;
+    min-height: 100vh;
     background-color: #e1e5f2;
 }
 
@@ -142,7 +142,7 @@ body {
 }
 
 #intro h1 {
-    font-size: 4rem;
+    font-size: clamp(3.5rem, 20vw, 4rem);
     text-transform: uppercase;
 }
 
@@ -159,9 +159,9 @@ body {
     border-radius: 5px;
     background-color: #e1e5f2;
     color: #001f3f;
-    width: 10vw;
+    width: 20vw;
     text-align: center;
-    margin: 10px auto 25px 10px;
+    margin: 20px auto 25px 15px;
     scale: 1.1;
 }
 
@@ -174,11 +174,11 @@ body {
 
 
 #intro-text {
-    width: 50vw;
+    width: 70vw;
 }
 
 #intro-img {
-    width: 70vw;
+    width: 60vw;
     justify-content: flex-end;
 }
 
@@ -210,32 +210,6 @@ body {
     font-weight: 500;
     display: flex;
     justify-content: center;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        top: 70px;
-        /* Below the navbar */
-        right: 0;
-        width: 100%;
-        background-color: rgba(51, 51, 51, 0.9);
-        flex-direction: column;
-        align-items: flex-end;
-        transform: translateY(-100%);
-        /* Hide initially */
-    }
-
-    .nav-links.active {
-        transform: translateY(0);
-        /* Slide down */
-    }
-
-    .hamburger {
-        display: block;
-        /* Show hamburger on mobile */
-    }
 }
 
 #promise-div {
@@ -557,6 +531,10 @@ p {
     font-size: 1.5em;
     color: #000;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
 }
 
 .price span {
@@ -565,173 +543,50 @@ p {
     color: #777;
 }
 
-.cta-button {
+#cta-button {
+    display: inline-block; /* Better for consistent inline behavior */
     padding: 10px 20px;
     font-size: 1rem;
     text-transform: uppercase;
-    border: 1px solid black;
+    border: 2px solid #001f3f; /* Add border to ensure clear visibility */
     border-radius: 5px;
     background-color: white;
     color: #001f3f;
-    width: 10vw;
     text-align: center;
-    margin: 0 auto 25px auto;
-    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease; /* Smoother transition */
+    font-weight: 600;
+}
+
+#cta-button:hover {
+    background-color: #001f3f;
+    color: white;
+    transform: scale(1.05);
+}
+
+.cta-button {
+    display: inline-block; /* Better for consistent inline behavior */
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: 2px solid #001f3f; /* Add border to ensure clear visibility */
+    border-radius: 5px;
+    background-color: white;
+    color: #001f3f;
+    text-align: center;
+    margin: 20px auto;
+    cursor: pointer;
+    width: 1%;
+    transition: all 0.3s ease; /* Smoother transition */
 }
 
 .cta-button:hover {
     background-color: #001f3f;
     color: white;
     transform: scale(1.05);
-    transition: transform 0.5s, color 0.5s, background-color 0.5s;
 }
-
-@media (max-width: 1024px) {
-    #intro {
-        flex-direction: column;
-        padding: 150px 20px 50px 20px;
-    }
-
-    #intro h1 {
-        font-size: 2.5rem;
-    }
-
-    #intro p {
-        font-size: 1rem;
-    }
-
-    #intro-text {
-        width: 90vw;
-        text-align: center;
-    }
-
-    #intro-img {
-        width: 90vw;
-        display: flex;
-        justify-content: center;
-    }
-
-    #whatwedo h1 {
-        font-size: 2.5rem;
-    }
-
-    #what-we-offer {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
-    #pricing-plans {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
-
-    #lump-sum,
-    #monthly-plan {
-        width: 80%;
-    }
-
-    .nav-links a {
-        font-size: 1rem;
-    }
-}
-
-/* For Smaller Devices (Tablets & Phones) */
-@media (max-width: 768px) {
-    #intro {
-        padding: 100px 10px 30px 10px;
-    }
-
-    .navbar {
-        padding: 10px 5%;
-        font-size: 1rem;
-    }
-
-    #whatwedo {
-        padding: 50px 10px;
-    }
-
-    .whatwedo-grid {
-        padding: 0 10px 50px 10px;
-    }
-
-    #portfolio h2,
-    #pricing h2 {
-        font-size: 2rem;
-    }
-
-    .offers {
-        flex-direction: column;
-    }
-
-    .offer {
-        width: 90%;
-        margin: 10px;
-    }
-
-    .cta-button,
-    #what-we-offer button {
-        width: 60%;
-    }
-}
-
-/* Extra Small Devices (Mobile Phones) */
-@media (max-width: 480px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
-
-    .navbar-container {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .nav-links {
-        width: 100%;
-        background-color: #022b3a;
-    }
-
-    .nav-links a {
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-        font-size: 0.9rem;
-    }
-
-    .wow-button {
-        width: 80%;
-        margin: 20px auto;
-    }
-
-    #intro h1 {
-        font-size: 2rem;
-    }
-
-    #intro p {
-        font-size: 1rem;
-    }
-
-    .grid-item {
-        padding: 15px;
-    }
-
-    .pricing-plans h3 {
-        font-size: 1.25rem;
-    }
-
-    #coming-soon {
-        font-size: 1.5rem;
-        padding: 30px 10px;
-        margin: 30px;
-    }
-}
-
 
 .footer {
     background-color: #022b3a;
@@ -839,4 +694,135 @@ p {
 .footer-item-img {
     width: 25px;
     padding-right: 10px;
+}
+
+@media (max-width: 1024px) {
+    #intro {
+        flex-direction: column;
+        padding: 150px 50px 50px 50px;
+        text-align: center;
+    }
+
+    #intro h1 {
+        font-size: 3rem;
+    }
+
+    #intro h2 {
+        font-size: 1.2rem;
+    }
+
+    #intro p {
+        font-size: 1rem;
+    }
+
+    #intro-text, #intro-img {
+        width: 80vw;
+    }
+
+    .wow-button {
+        width: 20vw;
+    }
+}
+
+/* For Smaller Devices (Tablets & Phones) */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        /* Below the navbar */
+        right: 0;
+        width: 100%;
+        background-color: rgba(51, 51, 51, 0.9);
+        flex-direction: column;
+        align-items: flex-end;
+        transform: translateY(-100%);
+        /* Hide initially */
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        /* Slide down */
+    }
+
+    .hamburger {
+        display: block;
+        /* Show hamburger on mobile */
+    }
+
+    .navbar {
+        padding: 10px 5%;
+        font-size: 1rem;
+    }
+
+    #intro {
+        padding: 100px 30px 30px 30px;
+    }
+
+    #intro h1 {
+        font-size: 2.5rem;
+    }
+
+    #intro h2 {
+        font-size: 1rem;
+    }
+
+    #intro p {
+        font-size: 0.9rem;
+    }
+
+    .wow-button {
+        width: 30vw;
+    }
+}
+
+/* Extra Small Devices (Mobile Phones) */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        width: 100%;
+        background-color: #022b3a;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    #intro {
+        padding: 80px 20px 20px 20px;
+    }
+
+    #intro h1 {
+        font-size: 2rem;
+    }
+
+    #intro h2 {
+        font-size: 0.9rem;
+    }
+
+    #intro p {
+        font-size: 0.8rem;
+    }
+
+    #intro-text, #intro-img {
+        width: 100%;
+    }
+
+    .wow-button {
+        width: 50vw;
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
 }

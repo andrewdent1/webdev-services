@@ -26,7 +26,7 @@ body {
     z-index: 1000;
     border-radius: 20px;
     color: black;
-    font-size: 1.25rem;
+    font-size: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
@@ -67,7 +67,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    padding: 14px 20px;
+    padding: 14px 15px;
     transition: transform 0.1s;
     color: black;
     position: relative;
@@ -82,52 +82,38 @@ body {
 
 .dropdown {
     position: relative;
-    /* Positioning context for dropdown */
 }
 
 .dropdown-content {
     display: none;
-    /* Initially hide the dropdown content */
     position: absolute;
-    /* Position it absolutely to the parent */
     background-color: white;
-    /* Background color of the dropdown */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    /* Ensure dropdown is above other elements */
     margin-top: 10px;
-    /* Add some spacing from the button */
     border-radius: 5px;
-    /* Optional: add border radius */
 }
 
 .dropdown-content a {
     color: black;
-    /* Link color */
     padding: 10px 20px;
-    /* Padding for dropdown links */
     text-decoration: none;
-    /* Remove underline */
     display: block;
-    /* Display links as blocks */
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-    /* Show dropdown on hover */
 }
 
 .dropdown-content a:hover {
     background-color: #022b3a;
-    /* Highlight on hover */
     color: white;
-    /* Change text color on hover */
     border: 1px solid white;
 }
 
 #intro {
     margin: 0px 0px 100px 0px;
-    padding: 250PX 0px 100px 100px;
+    padding: 250PX 200px 100px 200px;
     display: flex;
     align-items: center;
     min-height: 100vh;
@@ -135,14 +121,14 @@ body {
 }
 
 #intro h2 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     text-transform: uppercase;
     padding-bottom: 20px;
     font-weight: 500;
 }
 
 #intro h1 {
-    font-size: clamp(3.5rem, 20vw, 4rem);
+    font-size: 4.25rem;
     text-transform: uppercase;
 }
 
@@ -171,7 +157,6 @@ body {
     transform: scale(1.05);
     transition: transform 0.5s, color 0.5s, background-color 0.5s;
 }
-
 
 #intro-text {
     width: 70vw;
@@ -725,22 +710,35 @@ p {
 }
 
 /* For Smaller Devices (Tablets & Phones) */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
+    .navbar.active {
+        z-index: 1;
+    }
+
     .nav-links {
         position: absolute;
         top: 70px;
         /* Below the navbar */
         right: 0;
         width: 100%;
-        background-color: rgba(51, 51, 51, 0.9);
         flex-direction: column;
         align-items: flex-end;
-        transform: translateY(-100%);
+        display: none;
         /* Hide initially */
     }
 
     .nav-links.active {
-        transform: translateY(0);
+        padding: 0;
+        margin-top: 1%;
+        background-color: #ffffff;
+        width: 25%;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 280px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+        z-index: -1;
         /* Slide down */
     }
 

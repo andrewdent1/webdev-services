@@ -25,7 +25,7 @@ body {
     z-index: 1000;
     border-radius: 20px;
     color: black;
-    font-size: 1.25rem;
+    font-size: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
@@ -66,7 +66,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    padding: 14px 20px;
+    padding: 14px 15px;
     transition: transform 0.1s;
     color: black;
     position: relative;
@@ -81,46 +81,32 @@ body {
 
 .dropdown {
     position: relative;
-    /* Positioning context for dropdown */
 }
 
 .dropdown-content {
     display: none;
-    /* Initially hide the dropdown content */
     position: absolute;
-    /* Position it absolutely to the parent */
     background-color: white;
-    /* Background color of the dropdown */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    /* Ensure dropdown is above other elements */
     margin-top: 10px;
-    /* Add some spacing from the button */
     border-radius: 5px;
-    /* Optional: add border radius */
 }
 
 .dropdown-content a {
     color: black;
-    /* Link color */
     padding: 10px 20px;
-    /* Padding for dropdown links */
     text-decoration: none;
-    /* Remove underline */
     display: block;
-    /* Display links as blocks */
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-    /* Show dropdown on hover */
 }
 
 .dropdown-content a:hover {
     background-color: #022b3a;
-    /* Highlight on hover */
     color: white;
-    /* Change text color on hover */
     border: 1px solid white;
 }
 
@@ -400,4 +386,43 @@ body {
 
 .color-icon {
     scale: 10;
+}
+
+@media (max-width: 850px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        /* Below the navbar */
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        display: none;
+        /* Hide initially */
+    }
+
+    .nav-links.active {
+        padding: 0;
+        margin: 0;
+        background-color: #ffffff;
+        width: 25%;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 280px;
+
+        /* Slide down */
+    }
+
+    .hamburger {
+        display: block;
+        /* Show hamburger on mobile */
+    }
+
+    .navbar {
+        padding: 10px 5%;
+        font-size: 1rem;
+    }
 }

@@ -114,12 +114,20 @@ body {
 }
 
 #intro {
-    margin: 0px 0px 100px 0px;
-    padding: 250PX 200px 100px 200px;
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     min-height: 100vh;
-    background-color: #e1e5f2;
+    background-color: #000;
+    /* Black background for space */
+    overflow: hidden;
+    padding: 50px;
+}
+
+#intro-text {
+    color: white;
+    z-index: 3;
 }
 
 #intro h2 {
@@ -135,7 +143,7 @@ body {
 }
 
 #intro p {
-    padding: 20px 0px;
+    padding: 20px 0;
     font-size: 1.25rem;
 }
 
@@ -143,21 +151,20 @@ body {
     padding: 10px 20px;
     font-size: 1rem;
     text-transform: uppercase;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 5px;
-    background-color: #e1e5f2;
-    color: #001f3f;
+    background-color: transparent;
+    color: white;
     width: 20vw;
     text-align: center;
-    margin: 20px auto 25px 15px;
-    scale: 1.1;
+    margin: 20px 0;
+    transition: 0.5s;
 }
 
 .wow-button:hover {
-    background-color: #001f3f;
-    color: white;
+    background-color: white;
+    color: black;
     transform: scale(1.05);
-    transition: transform 0.5s, color 0.5s, background-color 0.5s;
 }
 
 #intro-text {
@@ -521,11 +528,13 @@ p {
 }
 
 #cta-button {
-    display: inline-block; /* Better for consistent inline behavior */
+    display: inline-block;
+    /* Better for consistent inline behavior */
     padding: 10px 20px;
     font-size: 1rem;
     text-transform: uppercase;
-    border: 2px solid #001f3f; /* Add border to ensure clear visibility */
+    border: 2px solid #001f3f;
+    /* Add border to ensure clear visibility */
     border-radius: 5px;
     background-color: white;
     color: #001f3f;
@@ -533,7 +542,8 @@ p {
     margin: 20px auto;
     cursor: pointer;
     width: 100%;
-    transition: all 0.3s ease; /* Smoother transition */
+    transition: all 0.3s ease;
+    /* Smoother transition */
     font-weight: 600;
 }
 
@@ -544,11 +554,13 @@ p {
 }
 
 .cta-button {
-    display: inline-block; /* Better for consistent inline behavior */
+    display: inline-block;
+    /* Better for consistent inline behavior */
     padding: 10px 20px;
     font-size: 1rem;
     text-transform: uppercase;
-    border: 2px solid #001f3f; /* Add border to ensure clear visibility */
+    border: 2px solid #001f3f;
+    /* Add border to ensure clear visibility */
     border-radius: 5px;
     background-color: white;
     color: #001f3f;
@@ -556,7 +568,8 @@ p {
     margin: 20px auto;
     cursor: pointer;
     width: 1%;
-    transition: all 0.3s ease; /* Smoother transition */
+    transition: all 0.3s ease;
+    /* Smoother transition */
 }
 
 .cta-button:hover {
@@ -692,7 +705,8 @@ p {
         font-size: 1rem;
     }
 
-    #intro-text, #intro-img {
+    #intro-text,
+    #intro-img {
         width: 80vw;
     }
 
@@ -806,7 +820,8 @@ p {
         font-size: 0.8rem;
     }
 
-    #intro-text, #intro-img {
+    #intro-text,
+    #intro-img {
         width: 100%;
     }
 
@@ -814,5 +829,77 @@ p {
         width: 50vw;
         padding: 8px 15px;
         font-size: 0.8rem;
+    }
+}
+
+#rocket-animation {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.star-field {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: white;
+    opacity: 0.8;
+    animation: move-stars 10s linear infinite;
+}
+
+.rocket {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 160px;
+    background-image: url('/Logos/SCWD\ Icon\ -\ White.png');
+
+    /* Use specified rocket image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+    animation: rocket-launch 5s ease-in-out infinite;
+}
+
+.rocket.launch {
+    transform: translate(-50%, -80vh);
+    /* Move rocket up */
+}
+
+@keyframes move-stars {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes rocket-launch {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-80%);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }

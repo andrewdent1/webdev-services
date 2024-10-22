@@ -524,11 +524,13 @@ p {
 }
 
 #cta-button {
-    display: inline-block; /* Better for consistent inline behavior */
+    display: inline-block;
+    /* Better for consistent inline behavior */
     padding: 10px 20px;
     font-size: 1rem;
     text-transform: uppercase;
-    border: 2px solid #001f3f; /* Add border to ensure clear visibility */
+    border: 2px solid #001f3f;
+    /* Add border to ensure clear visibility */
     border-radius: 5px;
     background-color: white;
     color: #001f3f;
@@ -536,7 +538,8 @@ p {
     margin: 20px auto;
     cursor: pointer;
     width: 100%;
-    transition: all 0.3s ease; /* Smoother transition */
+    transition: all 0.3s ease;
+    /* Smoother transition */
     font-weight: 600;
 }
 
@@ -547,11 +550,13 @@ p {
 }
 
 .cta-button {
-    display: inline-block; /* Better for consistent inline behavior */
+    display: inline-block;
+    /* Better for consistent inline behavior */
     padding: 10px 20px;
     font-size: 1rem;
     text-transform: uppercase;
-    border: 2px solid #001f3f; /* Add border to ensure clear visibility */
+    border: 2px solid #001f3f;
+    /* Add border to ensure clear visibility */
     border-radius: 5px;
     background-color: white;
     color: #001f3f;
@@ -559,7 +564,8 @@ p {
     margin: 20px auto;
     cursor: pointer;
     width: 1%;
-    transition: all 0.3s ease; /* Smoother transition */
+    transition: all 0.3s ease;
+    /* Smoother transition */
 }
 
 .cta-button:hover {
@@ -695,7 +701,8 @@ p {
         font-size: 1rem;
     }
 
-    #intro-text, #intro-img {
+    #intro-text,
+    #intro-img {
         width: 80vw;
     }
 
@@ -809,7 +816,8 @@ p {
         font-size: 0.8rem;
     }
 
-    #intro-text, #intro-img {
+    #intro-text,
+    #intro-img {
         width: 100%;
     }
 

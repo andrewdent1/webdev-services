@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
-            const link = document.querySelector(`a[href="#${section.id}"]`);
+            const link = document.querySelector(a[href = "#${section.id}"]);
 
             if (fromTop >= sectionTop && fromTop < sectionTop + sectionHeight) {
                 link.classList.add("active");
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Navbar behavior on scroll
-    window.onscroll = function() {
+    window.onscroll = function () {
         if (window.pageYOffset > sticky) {
             navbar.classList.add("scrolled"); // Add class for styling
             navbar.style.position = "fixed"; // Fix navbar to the top of the viewport
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Smooth scrolling to sections
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function(e) {
+        anchor.addEventListener("click", function (e) {
             e.preventDefault();
             document.querySelector(this.getAttribute("href")).scrollIntoView({
                 behavior: "smooth"
@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+<<<<<<< HEAD
 
 document.querySelector('.wow-button').addEventListener('click', function (e) {
     const button = e.currentTarget;
@@ -83,3 +84,5 @@ document.querySelector('.wow-button').addEventListener('click', function (e) {
         ripple.remove();
     }, 600); // Duration matches CSS animation
 });
+=======
+>>>>>>> 50c301213713daaa08553eca9e6728bdd26da7c9

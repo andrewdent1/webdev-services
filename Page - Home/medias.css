@@ -117,3 +117,466 @@
         font-size: 0.9rem;
     }
 }
+
+#whatwedo {
+    padding: 50px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#whatwedo h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+#yourwebsiteagain {
+    padding-bottom: 25px;
+}
+
+#no {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@media (min-width: 480px) {
+    #whatwedo h1 {
+        font-size: 2.5rem;
+    }
+
+    #no {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    #whatwedo {
+        padding: 60px 0 110px 0;
+    }
+
+    #whatwedo h1 {
+        font-size: 3rem;
+    }
+
+    #no {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    #whatwedo {
+        padding: 80px 0 120px 0;
+    }
+
+    #whatwedo h1 {
+        font-size: 3.5rem;
+    }
+
+    #no {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 1500px) {
+    #whatwedo {
+        padding: 100px 0 150px 0;
+    }
+
+    #whatwedo h1 {
+        font-size: 4rem;
+    }
+
+    #no {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 480px) {
+    #key-features {
+        font-size: 2.2rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+
+    .grid-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .grid-item p {
+        font-size: 1.1rem;
+    }
+
+    .grid-container {
+        padding: 0 2%;
+    }
+}
+
+@media (min-width: 768px) {
+    .whatwedo-grid {
+        padding: 100px 0;
+    }
+
+    #key-features {
+        font-size: 2.5rem;
+    }
+
+    .grid-item h3 {
+        font-size: 1.4rem;
+    }
+
+    .grid-item p {
+        font-size: 1.2rem;
+    }
+
+    .grid-container {
+        padding: 0 2%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .whatwedo-grid {
+        padding: 120px 0;
+    }
+
+    #key-features {
+        font-size: 2.8rem;
+    }
+
+    .grid-item h3 {
+        font-size: 1.6rem;
+    }
+
+    .grid-item p {
+        font-size: 1.3rem;
+    }
+
+    .grid-container {
+        padding: 0 2%;
+    }
+}
+
+@media (min-width: 1500px) {
+    .whatwedo-grid {
+        padding: 150px 0;
+    }
+
+    #key-features {
+        font-size: 3rem;
+    }
+
+    .grid-item h3 {
+        font-size: 1.8rem;
+    }
+
+    .grid-item p {
+        font-size: 1.4rem;
+    }
+
+    .grid-container {
+        padding: 0 2%;
+    }
+}
+
+@media (min-width: 480px) {
+    #about-section {
+        padding: 50px 10px;
+    }
+
+    #about-h2 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    #about-p {
+        font-size: 1.1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #about-img img {
+        width: 90%;
+    }
+
+    .offers {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .offer {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    #about-section {
+        padding: 100px 50px;
+    }
+
+    #about-h2 {
+        font-size: 2.5rem;
+        display: flex;
+        text-align: center;
+    }
+
+    #about-p {
+        font-size: 1.25rem;
+    }
+
+    #about-details {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #about-img {
+        width: 40%;
+    }
+
+    #what-we-offer {
+        width: 60%;
+        padding-left: 30px;
+    }
+
+    .offers {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .offer {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1100px) {
+    #about-section {
+        padding: 120px 80px;
+    }
+
+    #about-h2 {
+        font-size: 2.8rem;
+    }
+
+    #about-p {
+        font-size: 1.35rem;
+    }
+
+    #about-img {
+        width: 35%;
+    }
+
+    #what-we-offer {
+        width: 65%;
+        padding-left: 50px;
+    }
+
+    .offer {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1500px) {
+    #about-section {
+        padding: 150px 100px;
+    }
+
+    #about-h2 {
+        font-size: 3rem;
+    }
+
+    #about-p {
+        font-size: 1.5rem;
+    }
+
+    #about-img {
+        width: 30%;
+    }
+
+    #what-we-offer {
+        width: 66%;
+        padding-left: 50px;
+    }
+
+    .offers {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .offer {
+        width: 40%;
+    }
+}
+
+@media (min-width: 480px) {
+    #portfolio {
+        padding: 60px 30px;
+    }
+
+    #portfolio h2 {
+        font-size: 2.2rem;
+    }
+
+    #coming-soon {
+        padding: 40px;
+        margin: 40px 100px;
+        font-size: 1.75rem;
+        text-align: center;
+    }
+}
+
+/* For screens with width of 768px and above */
+@media (min-width: 768px) {
+    #portfolio {
+        padding: 80px 50px;
+    }
+
+    #portfolio h2 {
+        font-size: 2.5rem;
+    }
+
+    #coming-soon {
+        padding: 50px 100px;
+        margin: 50px 200px;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+/* For screens with width of 1100px and above */
+@media (min-width: 1100px) {
+    #portfolio {
+        padding: 100px 50px;
+    }
+
+    #portfolio h2 {
+        font-size: 2.5rem;
+    }
+
+    #coming-soon {
+        padding: 50px 100px;
+        margin: 50px 250px;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+/* For screens with width of 1500px and above */
+@media (min-width: 1500px) {
+    #coming-soon {
+        padding: 50px 100px;
+        margin: 50px 350px;
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 480px) {
+    #pricing {
+        padding: 40px 1%;
+    }
+
+    #lump-sum,
+    #monthly-plan {
+        width: 90%;
+    }
+
+    #pricing h2 {
+        font-size: 2.2rem;
+    }
+
+    .features li {
+        font-size: 1.1rem;
+    }
+
+    .price {
+        font-size: 1.4rem;
+    }
+}
+
+/* For screens with width of 768px and above */
+@media (min-width: 768px) {
+    #pricing {
+        padding: 50px 30px;
+    }
+
+    #pricing h2 {
+        font-size: 2.5rem;
+    }
+
+    #lump-sum,
+    #monthly-plan {
+        width: 90%;
+    }
+
+    .features li {
+        font-size: 1.25rem;
+    }
+
+    .price {
+        font-size: 1.5rem;
+    }
+}
+
+/* For screens with width of 1100px and above */
+@media (min-width: 1100px) {
+    #pricing {
+        padding: 75px 20px;
+    }
+
+    #pricing h2 {
+        font-size: 2.8rem;
+    }
+
+    #pricing-plans {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #lump-sum,
+    #monthly-plan {
+        width: 45%;
+        margin: 20px;
+    }
+
+    .features li {
+        font-size: 1.3rem;
+    }
+
+    .price {
+        font-size: 1.6rem;
+    }
+}
+
+/* For screens with width of 1500px and above */
+@media (min-width: 1500px) {
+    #pricing h2 {
+        font-size: 3rem;
+    }
+
+    #lump-sum,
+    #monthly-plan {
+        width: 30%;
+    }
+
+    .features li {
+        font-size: 1.4rem;
+    }
+
+    .price {
+        font-size: 1.75rem;
+    }
+}

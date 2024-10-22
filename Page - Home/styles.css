@@ -33,8 +33,11 @@ body {
 }
 
 .logo img {
-    width: 200px;
+    width: 15vw;
     padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar-container {
@@ -221,6 +224,7 @@ body {
     gap: 20px;
     width: 100%;
     max-width: 1500px;
+    justify-items: center;
 }
 
 .grid-item {
@@ -298,6 +302,7 @@ body {
     padding-bottom: 50px;
     font-size: 1.25rem;
     font-weight: 500;
+    text-align: center;
 }
 
 #about-us {
@@ -319,89 +324,48 @@ p {
 
 #about-details {
     display: flex;
-    flex-direction: row;
+}
+
+#about-p2 {
+    width: 50%;
+}
+
+#about-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #about-img img {
-    width: 100%;
+    min-width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-}
-
-#what-we-offer {
-    width: 66%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 50px;
-}
-
-#what-we-offer h3 {
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-.offers {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.offer {
-    width: 100%;
-    min-height: 20vh;
-    /* Allow height to grow if content requires more space */
-    margin: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    word-wrap: break-word;
-    /* Ensures long words are wrapped */
-    overflow-wrap: break-word;
-    /* For modern browsers */
-    box-sizing: border-box;
-    /* Ensures padding and borders are included in width calculation */
 }
 
-.offer h4 {
-    padding-bottom: 10px;
-}
-
-.offer:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-}
-
-#what-we-offer button {
-    padding: 10px 20px;
+.about-button {
+    padding: 10px 10px;
     font-size: 1rem;
     text-transform: uppercase;
-    border: 1px solid black;
+    border: 2px solid #001f3f;
     border-radius: 5px;
     background-color: white;
     color: #001f3f;
-    width: 10vw;
     text-align: center;
-    margin: 35px auto 25px auto;
-    scale: 1.1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 40px auto 20px auto;
+    cursor: pointer;
+    width: 15%;
+    font-weight: 700;
+    transition: all 0.3s ease;
 }
 
-#what-we-offer button:hover {
+.about-button:hover {
     background-color: #001f3f;
     color: white;
     transform: scale(1.05);
-    transition: transform 0.5s, color 0.5s, background-color 0.5s;
 }
 
 #portfolio {

@@ -60,7 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-<<<<<<< HEAD
 
 document.querySelector('.wow-button').addEventListener('click', function (e) {
     const button = e.currentTarget;
@@ -84,5 +83,3 @@ document.querySelector('.wow-button').addEventListener('click', function (e) {
         ripple.remove();
     }, 600); // Duration matches CSS animation
 });
-=======
->>>>>>> 50c301213713daaa08553eca9e6728bdd26da7c9

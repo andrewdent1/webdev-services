@@ -1,311 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-        rel="stylesheet">
+    <title>Layered Divs</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .container {
+            position: relative; /* Container to hold the layered divs */
+            width: 500px;
+            height: 300px;
+            background-color: lightgray;
         }
 
-        body {
-            font-family: 'DM Sans', sans-serif;
-            scroll-behavior: smooth;
-            /* Enable smooth scrolling */
-            color: #022b3a;
+        .layer1, .layer2 {
+            position: absolute; /* Make both divs layerable */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
-        #intro {
-            margin: 0px 0px 100px 0px;
-            padding: 250PX 200px 100px 200px;
-            display: flex;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #e1e5f2;
+        .layer1 {
+            background-color: rgba(0, 0, 255, 0.5); /* Semi-transparent blue */
+            z-index: 1; /* Lower layer */
         }
 
-        #intro h2 {
-            font-size: 1.75rem;
-            text-transform: uppercase;
-            padding-bottom: 20px;
-            font-weight: 500;
-        }
-
-        #intro h1 {
-            font-size: 4.25rem;
-            text-transform: uppercase;
-        }
-
-        #intro p {
-            padding: 20px 0px;
-            font-size: 1.25rem;
-        }
-
-        .wow-button {
-            padding: 10px 20px;
-            font-size: 1rem;
-            text-transform: uppercase;
-            border: 1px solid black;
-            border-radius: 5px;
-            background-color: #e1e5f2;
-            color: #001f3f;
-            width: 20vw;
-            text-align: center;
-            margin: 20px auto 25px 15px;
-            scale: 1.1;
-        }
-
-        .wow-button:hover {
-            background-color: #001f3f;
-            color: white;
-            transform: scale(1.05);
-            transition: transform 0.5s, color 0.5s, background-color 0.5s;
-        }
-
-        #intro-text {
-            width: 70vw;
-        }
-
-        #intro-img {
-            width: 60vw;
-            justify-content: flex-end;
-        }
-
-        #intro-img img {
-            max-width: 100%;
-            justify-content: flex-end;
-        }
-
-        /* Large Screens (1500px and below) */
-        @media (max-width: 1500px) {
-            #intro {
-                padding: 200px 100px 100px 100px;
-            }
-
-            #intro h1 {
-                font-size: 3.5rem;
-            }
-
-            #intro h2 {
-                font-size: 1.6rem;
-            }
-
-            #intro p {
-                font-size: 1.1rem;
-            }
-
-            #intro-text,
-            #intro-img {
-                width: 70%;
-            }
-
-            .wow-button {
-                width: 30%;
-            }
-        }
-
-        /* Medium Screens (1100px and below) */
-        @media (max-width: 1100px) {
-            #intro {
-                padding: 150px 75px 75px 75px;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            #intro h1 {
-                font-size: 3rem;
-            }
-
-            #intro h2 {
-                font-size: 1.4rem;
-            }
-
-            #intro p {
-                font-size: 1rem;
-            }
-
-            #intro-text,
-            #intro-img {
-                width: 80%;
-                margin: 0 auto;
-            }
-
-            .wow-button {
-                width: 40%;
-            }
-        }
-
-        /* Tablet Screens (768px and below) */
-        @media (max-width: 768px) {
-            #intro {
-                flex-direction: column;
-                padding: 100px 50px 50px 50px;
-                text-align: center;
-            }
-
-            #intro h1 {
-                font-size: 3rem;
-            }
-
-            #intro h2 {
-                font-size: 1.5rem;
-            }
-
-            #intro p {
-                font-size: 1rem;
-            }
-
-            #intro-text,
-            #intro-img {
-                width: 80vw;
-                margin: 0 auto;
-            }
-
-            .wow-button {
-                width: 50%;
-                margin: 20px auto;
-            }
-        }
-
-        /* Mobile Screens (480px and below) */
-        @media (max-width: 480px) {
-            #intro {
-                padding: 50px 20px 20px 20px;
-            }
-
-            #intro h1 {
-                font-size: 2.5rem;
-            }
-
-            #intro h2 {
-                font-size: 1.2rem;
-            }
-
-            #intro p {
-                font-size: 0.9rem;
-            }
-
-            #intro-text,
-            #intro-img {
-                width: 90%;
-            }
-
-            .wow-button {
-                width: 70%;
-                font-size: 0.9rem;
-            }
+        .layer2 {
+            background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red */
+            z-index: 0; /* Higher layer */
         }
     </style>
 </head>
-
 <body>
-    <section id="intro">
-        <div id="intro-text">
-            <h2>Custom Designed, Custom Coded</h2>
-            <h1>Small Business</h1>
-            <h1>Web Development</h1>
-            <p>100% hard-coded websites for local businesses, starting at $199/mo.</p>
-            <button class="wow-button">Learn More</button>
-        </div>
-        <div id="intro-img">
-            <img src="Images/laptop.avif" alt="">
-        </div>
-    </section>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const navbar = document.getElementById("navbar");
-            const hamburger = document.getElementById("hamburger");
-            const navLinks = document.getElementById("nav-links");
-            const sections = document.querySelectorAll("section");
-            const sticky = navbar.offsetTop; // Get the navbar's initial position
-
-            // Highlight active section link
-            function highlightActiveLink() {
-                const fromTop = window.scrollY + navbar.offsetHeight;
-
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
-                    const link = document.querySelector(`a[href="#${section.id}"]`);
-
-                    if (fromTop >= sectionTop && fromTop < sectionTop + sectionHeight) {
-                        link.classList.add("active");
-                    } else {
-                        link.classList.remove("active");
-                    }
-                });
-            }
-
-            // Navbar behavior on scroll
-            window.onscroll = function() {
-                if (window.pageYOffset > sticky) {
-                    navbar.classList.add("scrolled"); // Add class for styling
-                    navbar.style.position = "fixed"; // Fix navbar to the top of the viewport
-                    navbar.style.top = "0"; // Set top position
-                } else {
-                    navbar.classList.remove("scrolled"); // Remove class
-                    navbar.style.position = "absolute"; // Return to initial position
-                    navbar.style.top = "20px"; // Set to initial top position
-                }
-                highlightActiveLink(); // Update active link highlight
-            };
-
-            // Toggle hamburger menu
-            hamburger.addEventListener("click", () => {
-                navLinks.classList.toggle("active"); // Toggle active class for slide-down effect
-            });
-
-            // Close mobile menu when a link is clicked
-            navLinks.querySelectorAll("a").forEach(link => {
-                link.addEventListener("click", () => {
-                    if (navLinks.classList.contains("active")) {
-                        navLinks.classList.remove("active"); // Close the mobile menu
-                    }
-                });
-            });
-
-            // Smooth scrolling to sections
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener("click", function(e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute("href")).scrollIntoView({
-                        behavior: "smooth"
-                    });
-                });
-            });
-        });
-
-        document.querySelector('.wow-button').addEventListener('click', function (e) {
-            const button = e.currentTarget;
-
-            // Create a span element to act as the ripple
-            const ripple = document.createElement('span');
-            const size = Math.max(button.offsetWidth, button.offsetHeight);
-            const x = e.pageX - button.offsetLeft - size / 2;
-            const y = e.pageY - button.offsetTop - size / 2;
-
-            ripple.style.width = ripple.style.height = `${size}px`;
-            ripple.style.left = `${x}px`;
-            ripple.style.top = `${y}px`;
-            ripple.classList.add('ripple');
-
-            // Add ripple to the button
-            button.appendChild(ripple);
-
-            // Remove ripple after animation ends
-            setTimeout(() => {
-                ripple.remove();
-            }, 600); // Duration matches CSS animation
-        });
-    </script>
+    <div class="container">
+        <div class="layer1">Layer 1</div>
+        <div class="layer2">Layer 2</div>
+    </div>
 </body>
 </html>

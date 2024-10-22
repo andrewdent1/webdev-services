@@ -118,7 +118,9 @@ body {
     padding: 250PX 200px 100px 200px;
     display: flex;
     align-items: center;
+    justify-content: center;
     min-height: 100vh;
+    color: #001f3f;
     background-color: #e1e5f2;
 }
 
@@ -162,6 +164,7 @@ body {
 
 #intro-text {
     width: 70vw;
+    position: absolute;
 }
 
 #whatwedo {

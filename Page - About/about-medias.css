@@ -8,7 +8,7 @@
     }
 
     #intro p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     #intro-img {
@@ -31,7 +31,7 @@
     }
 
     #intro p {
-        font-size: 0.85rem;
+        font-size: 1rem;
     }
 
     #intro-img {
@@ -63,7 +63,7 @@
     }
 
     #intro p {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     #intro-img {
@@ -88,7 +88,7 @@
     }
 
     #intro p {
-        font-size: 0.75rem;
+        font-size: 0.9rem;
     }
 
     #intro-img {
@@ -97,5 +97,164 @@
 
     #intro-button {
         width: 40vw;
+    }
+}
+
+@media (max-width: 1500px) {
+    #process {
+        padding: 120px 50px;
+    }
+
+    #process h2 {
+        font-size: 1.8rem;
+        padding-bottom: 60px;
+    }
+
+    .process-step {
+        max-width: 280px;
+    }
+
+    .process-step h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* For screens 1100px and below */
+@media (max-width: 1100px) {
+    #process {
+        padding: 100px 40px;
+    }
+
+    #process h2 {
+        font-size: 1.9rem;
+        padding-bottom: 40px;
+    }
+
+    #process-steps {
+        flex-direction: column;
+        /* Stacks steps vertically */
+        align-items: center;
+    }
+
+    .process-step {
+        max-width: 800px;
+        margin: 20px 0;
+        padding: 40px;
+    }
+
+    .process-step h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+    #process {
+        padding: 80px 30px;
+    }
+
+    #process h2 {
+        font-size: 1.7rem;
+        padding-bottom: 40px;
+    }
+
+    .process-step {
+        padding: 40px 15px;
+        max-width: 90%;
+    }
+
+    .process-step h4 {
+        font-size: 1rem;
+    }
+
+    .process-step h3 {
+        font-size: 1rem;
+    }
+}
+
+/* For screens 480px and below */
+@media (max-width: 480px) {
+    #process {
+        padding: 60px 20px;
+    }
+
+    #process h2 {
+        font-size: 1.4rem;
+        padding-bottom: 30px;
+    }
+
+    .process-step {
+        padding: 30px 10px;
+        max-width: 95%;
+    }
+
+    .process-step h4 {
+        font-size: 0.9rem;
+    }
+
+    .process-step h3 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 480px) {
+    #testimonials {
+        padding: 60px 30px;
+    }
+
+    #testimonials h2 {
+        font-size: 2.2rem;
+    }
+
+    #coming-soon {
+        padding: 40px;
+        margin: 40px 100px;
+        font-size: 1.75rem;
+        text-align: center;
+    }
+}
+
+/* For screens with width of 768px and above */
+@media (min-width: 768px) {
+    #testimonials {
+        padding: 80px 50px;
+    }
+
+    #testimonials h2 {
+        font-size: 2.5rem;
+    }
+
+    #coming-soon {
+        padding: 50px 100px;
+        margin: 50px 200px;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+/* For screens with width of 1100px and above */
+@media (min-width: 1100px) {
+    #testimonials {
+        padding: 100px 50px;
+    }
+
+    #testimonials h2 {
+        font-size: 2.5rem;
+    }
+
+    #coming-soon {
+        padding: 50px 100px;
+        margin: 50px 250px;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+/* For screens with width of 1500px and above */
+@media (min-width: 1500px) {
+    #coming-soon {
+        padding: 50px 100px;
+        margin: 50px 350px;
+        font-size: 2.2rem;
     }
 }

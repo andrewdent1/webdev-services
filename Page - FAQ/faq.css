@@ -127,7 +127,7 @@ body {
 .half-circle-text {
     color: white;
     /* Change to your desired text color */
-    font-size: 4em;
+    font-size: 3.8em;
     /* Adjust as needed */
     padding: 20px;
     /* Optional padding */
@@ -136,6 +136,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 #faq {

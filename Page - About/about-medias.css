@@ -1,0 +1,101 @@
+@media (max-width: 1500px) {
+    #intro {
+        padding: 250px 40px 50px 40px;
+    }
+
+    #intro h2 {
+        font-size: 2.2rem;
+    }
+
+    #intro p {
+        font-size: 0.9rem;
+    }
+
+    #intro-img {
+        width: 45vw;
+    }
+
+    #intro-button {
+        width: 15vw;
+    }
+}
+
+/* For screens 1100px and below */
+@media (max-width: 1100px) {
+    #intro {
+        padding: 250px 30px 50px 30px;
+    }
+
+    #intro h2 {
+        font-size: 2rem;
+    }
+
+    #intro p {
+        font-size: 0.85rem;
+    }
+
+    #intro-img {
+        width: 50vw;
+    }
+
+    #intro-button {
+        width: 20vw;
+    }
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+    #intro {
+        flex-direction: column;
+        /* Stacks content vertically */
+        padding: 240px 20px 50px 20px;
+    }
+
+    #intro-text {
+        padding-right: 0;
+        /* Removes right padding for better fit */
+        text-align: center;
+        /* Centers text */
+    }
+
+    #intro h2 {
+        font-size: 1.8rem;
+    }
+
+    #intro p {
+        font-size: 0.8rem;
+    }
+
+    #intro-img {
+        width: 70vw;
+    }
+
+    #intro-button {
+        width: 30vw;
+        margin: 20px auto 50px auto;
+
+    }
+}
+
+/* For screens 480px and below */
+@media (max-width: 480px) {
+    #intro {
+        padding: 240px 10px 30px 10px;
+    }
+
+    #intro h2 {
+        font-size: 1.5rem;
+    }
+
+    #intro p {
+        font-size: 0.75rem;
+    }
+
+    #intro-img {
+        width: 90vw;
+    }
+
+    #intro-button {
+        width: 40vw;
+    }
+}

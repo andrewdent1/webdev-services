@@ -1,0 +1,295 @@
+@media (min-width: 480px) {
+    #pricing {
+        padding: 40px 1%;
+    }
+
+    #lump-sum,
+    #monthly-plan {
+        width: 90%;
+    }
+
+    #pricing h2 {
+        font-size: 2.2rem;
+    }
+
+    .features li {
+        font-size: 1.1rem;
+    }
+
+    .price {
+        font-size: 1.4rem;
+    }
+}
+
+/* For screens with width of 768px and above */
+@media (min-width: 768px) {
+    #pricing {
+        padding: 50px 30px;
+    }
+
+    #pricing h2 {
+        font-size: 2.5rem;
+    }
+
+    #lump-sum,
+    #monthly-plan {
+        width: 90%;
+    }
+
+    .features li {
+        font-size: 1.25rem;
+    }
+
+    .price {
+        font-size: 1.5rem;
+    }
+}
+
+/* For screens with width of 1100px and above */
+@media (min-width: 1100px) {
+    #pricing {
+        padding: 75px 20px;
+    }
+
+    #pricing h2 {
+        font-size: 2.8rem;
+    }
+
+    #pricing-plans {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #lump-sum,
+    #monthly-plan {
+        width: 45%;
+        margin: 20px;
+    }
+
+    .features li {
+        font-size: 1.3rem;
+    }
+
+    .price {
+        font-size: 1.6rem;
+    }
+}
+
+/* For screens with width of 1500px and above */
+@media (min-width: 1500px) {
+    #pricing h2 {
+        font-size: 3rem;
+    }
+
+    #lump-sum,
+    #monthly-plan {
+        width: 30%;
+    }
+
+    .features li {
+        font-size: 1.4rem;
+    }
+
+    .price {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 1500px) {
+    #main h2 {
+        margin: 550px 30px 20px 30px;
+        font-size: 2.2rem;
+    }
+
+    #main p {
+        margin: 0px 100px 20px 100px;
+    }
+}
+
+@media (max-width: 1100px) {
+    #main h2 {
+        margin: 500px 20px 15px 20px;
+        font-size: 2rem;
+    }
+
+    #main p {
+        margin: 0px 50px 15px 50px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #main h2 {
+        margin: 500px 15px 10px 15px;
+        font-size: 1.8rem;
+    }
+
+    #main p {
+        margin: 0px 20px 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #main h2 {
+        margin: 500px 10px 5px 10px;
+        font-size: 1.5rem;
+    }
+
+    #main p {
+        margin: 0px 10px 5px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 1500px) {
+    #why {
+        padding: 80px 100px;
+    }
+
+    #why-text h3 {
+        font-size: 1.8rem;
+    }
+
+    #why-text ul {
+        font-size: 1.1rem;
+    }
+
+    #why-img img {
+        width: 45vw;
+    }
+}
+
+@media (max-width: 1100px) {
+    #why {
+        padding: 60px 80px;
+    }
+
+    #why-text h3 {
+        font-size: 1.6rem;
+    }
+
+    #why-text ul {
+        font-size: 1rem;
+    }
+
+    #why-img img {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #why {
+        padding: 40px 50px;
+    }
+
+    #why-text h3 {
+        font-size: 1.4rem;
+    }
+
+    #why-text ul {
+        font-size: 0.9rem;
+    }
+
+    #why-img img {
+        width: 45vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #why {
+        padding: 20px 20px;
+    }
+
+    #why-text h3 {
+        font-size: 1.2rem;
+    }
+
+    #why-text ul {
+        font-size: 0.8rem;
+    }
+
+    #why-img img {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 1500px) {
+    #reasons-section {
+        padding: 0 100px 50px 100px;
+    }
+
+    #reasons-img img {
+        width: 20vw;
+        height: 60vh;
+        margin-right: 50px;
+    }
+
+    .reason h4 {
+        font-size: 1.4rem;
+    }
+
+    .reason p {
+        font-size: 1rem;
+        padding-bottom: 40px;
+    }
+}
+
+/* For screens 1100px and below */
+@media (max-width: 1100px) {
+    #reasons-section {
+        padding: 0 80px 50px 80px;
+    }
+
+    #reasons-img {
+        display: none;
+        /* Hides the image */
+    }
+
+    #reasons-img img {
+        width: 25vw;
+        height: 50vh;
+        margin-right: 30px;
+    }
+
+    .reason h4 {
+        font-size: 1.3rem;
+    }
+
+    .reason p {
+        font-size: 0.95rem;
+        padding-bottom: 35px;
+    }
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+    #reasons-section {
+        padding: 0 20px 50px 20px;
+    }
+
+    .reason h4 {
+        font-size: 1.2rem;
+    }
+
+    .reason p {
+        font-size: 0.9rem;
+        padding-bottom: 30px;
+    }
+}
+
+/* For screens 480px and below */
+@media (max-width: 480px) {
+    #reasons-section {
+        padding: 0 10px 50px 10px;
+    }
+
+    .reason h4 {
+        font-size: 1.1rem;
+    }
+
+    .reason p {
+        font-size: 0.85rem;
+        padding-bottom: 25px;
+    }
+}

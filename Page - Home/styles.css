@@ -245,6 +245,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0 auto 15px;
+    margin-top: 5px;
 }
 
 .grid-item img {
@@ -254,8 +255,9 @@ body {
 
 .grid-item h3 {
     font-size: 1.2rem;
-    margin: 10px 0;
+    margin: -10px 0 20px 0;
     color: #003F92;
+    text-transform: uppercase;
 }
 
 .grid-item p {

@@ -323,7 +323,6 @@ body {
 
 #pricing {
     padding: 100px;
-    background-color: #e1e5f2;
 }
 
 #pricing h2 {
@@ -400,11 +399,15 @@ body {
     font-size: 1.5em;
     color: #000;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
 }
 
 .price span {
     display: inline;
-    font-size: 0.7em;
+    font-size: 0.6em;
     color: #777;
 }
 

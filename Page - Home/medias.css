@@ -204,10 +204,12 @@
     }
 
     .grid-item h3 {
+        padding-top: 10px;
         font-size: 1.3rem;
     }
 
     .grid-item p {
+        margin-top: -10px;
         font-size: 1.1rem;
     }
 
@@ -226,11 +228,13 @@
     }
 
     .grid-item h3 {
-        font-size: 1.4rem;
+        padding-top: 10px;
+        font-size: 1.25rem;
     }
 
     .grid-item p {
-        font-size: 1.2rem;
+        margin-top: -10px;
+        font-size: 1.0rem;
     }
 
     .grid-container {
@@ -248,11 +252,13 @@
     }
 
     .grid-item h3 {
-        font-size: 1.6rem;
+        padding-top: 10px;
+        font-size: 1.25rem;
     }
 
     .grid-item p {
-        font-size: 1.3rem;
+        margin-top: -10px;
+        font-size: 1.0rem;
     }
 
     .grid-container {
@@ -270,11 +276,12 @@
     }
 
     .grid-item h3 {
-        font-size: 1.8rem;
+        padding-top: 20px;
+        font-size: 1.4rem;
     }
 
     .grid-item p {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
     }
 
     .grid-container {

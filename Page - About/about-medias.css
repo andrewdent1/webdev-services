@@ -1,6 +1,6 @@
 @media (max-width: 1500px) {
     #intro {
-        padding: 250px 40px 50px 40px;
+        padding: 50px 40px 50px 40px;
     }
 
     #intro h2 {
@@ -23,7 +23,7 @@
 /* For screens 1100px and below */
 @media (max-width: 1100px) {
     #intro {
-        padding: 250px 30px 50px 30px;
+        padding: 50px 30px 50px 30px;
     }
 
     #intro h2 {
@@ -48,7 +48,7 @@
     #intro {
         flex-direction: column;
         /* Stacks content vertically */
-        padding: 240px 20px 50px 20px;
+        padding: 40px 20px 50px 20px;
     }
 
     #intro-text {
@@ -80,7 +80,7 @@
 /* For screens 480px and below */
 @media (max-width: 480px) {
     #intro {
-        padding: 240px 10px 30px 10px;
+        padding: 40px 10px 30px 10px;
     }
 
     #intro h2 {
@@ -256,5 +256,74 @@
         padding: 50px 100px;
         margin: 50px 350px;
         font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .navbar.active {
+        z-index: 1;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        /* Below the navbar */
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        display: none;
+        /* Hide initially */
+    }
+
+    .nav-links.active {
+        padding: 0;
+        margin-top: 1%;
+        background-color: #ffffff;
+        width: 25%;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 280px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+        z-index: -1;
+        /* Slide down */
+    }
+
+    .hamburger {
+        display: block;
+        /* Show hamburger on mobile */
+    }
+
+    .navbar {
+        padding: 10px 5%;
+        font-size: 1rem;
+    }
+}
+
+/* Extra Small Devices (Mobile Phones) */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        width: 100%;
+        background-color: #022b3a;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        font-size: 0.9rem;
     }
 }

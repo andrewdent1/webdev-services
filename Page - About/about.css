@@ -30,8 +30,10 @@ body {
 }
 
 .logo img {
-    width: 200px;
-    padding-top: 10px;
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar-container {
@@ -111,38 +113,48 @@ body {
 }
 
 .half-circle {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    height: 60vh;
     width: 100vw;
-    height: 50vh;
-    background-color: #022b3a;
-    /* Replace with your desired color */
     border-bottom-left-radius: 100%;
     border-bottom-right-radius: 100%;
     overflow: hidden;
+    z-index: 1;
 }
 
+/* Starfield Canvas */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    z-index: 1; /* Place canvas behind content */
+}
+
+/* Text in Half-Circle */
 .half-circle-text {
     color: white;
-    /* Change to your desired text color */
+    background-color: #000;
     font-size: 4em;
-    /* Adjust as needed */
-    padding: 20px;
-    /* Optional padding */
-    margin: 25vh 0 0 0;
+    padding: 100px 20px 20px 20px;
+    margin: 0;
     text-transform: uppercase;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    position: relative; /* Ensure it's above the canvas */
 }
 
 #intro {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 250px 50px 50px 50px;
+    padding: 50px 50px 50px 50px;
 }
 
 #intro-text {
@@ -168,8 +180,6 @@ body {
 
 #intro-img img {
     width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
 }
 
 #intro-button {
@@ -191,6 +201,20 @@ body {
     color: white;
     transform: scale(1.05);
     transition: transform 0.5s, color 0.5s, background-color 0.5s;
+}
+
+.astronaut {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(-50%); }
+    50% { transform: translateY(calc(-50% - 20px)); }
 }
 
 #process {

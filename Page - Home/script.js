@@ -89,10 +89,9 @@ const context = canvas.getContext('2d');
 const stars = [];
 
 function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = document.querySelector('.whatwedo-grid').offsetWidth;
+    canvas.height = document.querySelector('.whatwedo-grid').offsetHeight;
 }
-
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 
@@ -124,11 +123,11 @@ function drawStars() {
     });
 }
 
-function animate() {
+function animateStarfield() {
     updateStars();
     drawStars();
-    requestAnimationFrame(animate);
+    requestAnimationFrame(animateStarfield);
 }
 
 createStars(200);
-animate();
+animateStarfield();

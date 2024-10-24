@@ -60,3 +60,58 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+const canvas = document.getElementById('starfield');
+const context = canvas.getContext('2d');
+const stars = [];
+
+// Resize the canvas to fit the half-circle
+function resizeCanvas() {
+    canvas.width = document.querySelector('.half-circle').offsetWidth;
+    canvas.height = document.querySelector('.half-circle').offsetHeight;
+}
+
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+// Create stars
+function createStars(count) {
+    stars.length = 0; // Clear the existing stars
+    for (let i = 0; i < count; i++) {
+        stars.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            size: Math.random() * 2,
+            speed: Math.random() * 0.5
+        });
+    }
+}
+
+// Update stars' positions
+function updateStars() {
+    stars.forEach(star => {
+        star.x -= star.speed;
+        if (star.x < 0) star.x = canvas.width;
+    });
+}
+
+// Draw stars on the canvas
+function drawStars() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.fillStyle = 'white';
+    stars.forEach(star => {
+        context.beginPath();
+        context.arc(star.x, star.y, star.size, 0, 2 * Math.PI);
+        context.fill();
+    });
+}
+
+// Animate the starfield
+function animate() {
+    updateStars();
+    drawStars();
+    requestAnimationFrame(animate);
+}
+
+createStars(200); // Adjust the number of stars as needed
+animate();

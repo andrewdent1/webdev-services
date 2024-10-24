@@ -34,7 +34,6 @@ body {
 
 .logo img {
     width: 15vw;
-    padding-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,10 +174,11 @@ body {
 }
 
 .wow-button:hover {
-    background-color: #001f3f;
+    background-color: black;
     color: white;
     transform: scale(1.05);
     transition: transform 0.5s, color 0.5s, background-color 0.5s;
+    border: 1px solid white;
 }
 
 #intro-text {
@@ -190,7 +190,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100vh;
-    background: radial-gradient(circle at 25% 25%, rgba(138, 43, 226, 0.8), rgba(75, 0, 130, 0.7), rgba(0, 0, 139, 0.5), transparent);
+    background: radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.8), rgba(75, 0, 130, 0.7), rgba(0, 0, 139, 0.5), transparent);
     animation: nebulaMove 7.5s infinite alternate;
 }
 
@@ -207,7 +207,6 @@ body {
 }
 
 #whatwedo {
-    padding: 50px 0 100px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -229,14 +228,14 @@ body {
     font-weight: 500;
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 canvas {
-    display: block;
     position: absolute;
-    height: 125vh;
     width: 100%;
-    padding: 100px 0px 100px 0px;
+    height: 100%;
+    z-index: 1;
 }
 
 #promise-div {
@@ -244,12 +243,10 @@ canvas {
 }
 
 #key-features {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 2.5rem;
     text-transform: uppercase;
     font-weight: 600;
+    z-index: 3;
 }
 
 .whatwedo-grid {
@@ -257,10 +254,13 @@ canvas {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
-    padding: 100px 0px 100px 0px;
     color: white;
     background-color: #000;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2; /* Above canvas */
+    padding: 100px 0px;
 }
 
 .grid-container {
@@ -279,6 +279,7 @@ canvas {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 10;
 }
 
 .grid-item .icon {
@@ -291,11 +292,14 @@ canvas {
     align-items: center;
     margin: 0 auto 15px;
     margin-top: 5px;
+    z-index: 100;
 }
 
 .grid-item img {
     width: 30px;
     height: 30px;
+    z-index: 100;
+    background-color: #003F92;
 }
 
 .grid-item h3 {
@@ -311,59 +315,37 @@ canvas {
     line-height: 1.4;
 }
 
-.grid-item a {
-    display: inline-block;
-    margin-top: 15px;
-    text-decoration: none;
-    color: #003F92;
-    font-weight: bold;
-    border-bottom: 2px solid transparent;
-    transition: color 0.3s, border-bottom 0.3s;
-}
-
-.grid-item a:hover {
-    color: #0056b3;
-    border-bottom: 2px solid #0056b3;
-}
-
 .grid-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-    background-color: rgb(255, 255, 255);
-    background-image: url(Images/space.png);
+    background-color: #eaf4ff;
     background-blend-mode: multiply;
     /* Layer the background image with the color */
 }
 
-.features-button {
-    padding: 10px 10px;
+.whatwedo-grid button {
+    padding: 10px 20px;
     font-size: 1rem;
     text-transform: uppercase;
-    border: 1px solid #001f3f;
+    border: 1px solid black;
     border-radius: 5px;
     background-color: white;
     color: #001f3f;
+    width: 20vw;
     text-align: center;
-    margin: 40px auto 20px auto;
-    cursor: pointer;
-    width: 15%;
-    font-weight: 700;
-    transition: all 0.3s ease;
+    margin: 50px auto 25px auto;
+    scale: 1.1;
+    z-index: 10; /* Ensure it's above other elements */
+    position: relative; /* To work with z-index */
+    cursor: pointer; 
 }
 
-.features-button a {
-    color: #001f3f;
-    text-decoration: none;
-}
-
-.features-button:hover {
+.whatwedo-grid button:hover {
+    background-color: black;
+    color: white;
     transform: scale(1.05);
-    background-color: #001f3f;
-    color: white;
-}
-
-.features-button a:hover {
-    color: white;
+    transition: transform 0.5s, color 0.5s, background-color 0.5s;
+    border: 1px solid white;
 }
 
 #about-section {
@@ -372,7 +354,6 @@ canvas {
     align-items: center;
     padding: 100px 50px;
 }
-
 #about-top {
     display: flex;
     flex-direction: column;
@@ -384,7 +365,12 @@ canvas {
 
 #about-top h2 {
     text-transform: uppercase;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
+    font-size: 3rem;
+}
+
+#about-top p {
+    font-size: 1.5rem;
 }
 
 #about-details {
@@ -403,6 +389,7 @@ canvas {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 1.25rem;
 }
 
 #about-details p {
@@ -412,44 +399,50 @@ canvas {
 }
 
 .about-button {
-    padding: 10px 10px;
+    padding: 10px 20px;
     font-size: 1rem;
     text-transform: uppercase;
-    border: 1px solid #001f3f;
+    border: 1px solid black;
     border-radius: 5px;
     background-color: white;
     color: #001f3f;
+    width: 20vw;
     text-align: center;
-    margin: 40px auto 20px auto;
-    cursor: pointer;
-    width: 15%;
-    font-weight: 700;
-    transition: all 0.3s ease;
-    width: 25%;
-    display: flex;
-    justify-content: center;
+    margin: 50px auto 25px auto;
+    scale: 1.1;
+    z-index: 10; /* Ensure it's above other elements */
+    position: relative; /* To work with z-index */
+    cursor: pointer; 
 }
 
 .about-button:hover {
-    transform: scale(1.05);
     background-color: #001f3f;
     color: white;
+    transform: scale(1.05);
+    transition: transform 0.5s, color 0.5s, background-color 0.5s;
+    border: 1px solid white;
 }
 
 #portfolio {
+    position: relative;
     padding: 100px 50px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: #e1e5f2;
+    align-items: center;
+    z-index: 0;
+    overflow: hidden;
+    background-color: #000;
 }
 
 #portfolio h2 {
     display: flex;
+    color: white;
     justify-content: center;
     text-transform: uppercase;
     font-size: 2.5rem;
     font-weight: 500;
+    z-index: 1;
 }
 
 #coming-soon {
@@ -457,12 +450,41 @@ canvas {
     display: flex;
     justify-content: center;
     padding: 50px 100px;
-    margin: 50px 350px 0px 350px;
+    margin: 50px 0;
     border: 1px solid #001f3f;
     border-radius: 10px;
     font-size: 2rem;
     font-weight: 700;
     background-color: white;
+    z-index: 1;
+    position: relative;
+}
+
+/* Nebula Background */
+.nebul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.8), rgba(75, 0, 130, 0.7), rgba(0, 0, 139, 0.5), transparent);
+    animation: nebulMove 7.5s infinite alternate;
+    z-index: -1; /* Ensures it's behind other content */
+}
+
+@keyframes nebulMove {
+    0% {
+        transform: scale(1);
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        transform: scale(1.2);
+        filter: hue-rotate(90deg);
+    }
+    100% {
+        transform: scale(1);
+        filter: hue-rotate(180deg);
+    }
 }
 
 #pricing {
@@ -663,7 +685,7 @@ canvas {
 
 .footer-links h3 {
     font-size: 18px;
-    margin-bottom: -20px;
+    margin-bottom: 10px;
 }
 
 .footer-links ul {

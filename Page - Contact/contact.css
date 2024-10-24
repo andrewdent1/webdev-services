@@ -30,8 +30,10 @@ body {
 }
 
 .logo img {
-    width: 200px;
-    padding-top: 10px;
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar-container {
@@ -111,31 +113,41 @@ body {
 }
 
 .half-circle {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    height: 60vh;
     width: 100vw;
-    height: 50vh;
-    background-color: #022b3a;
-    /* Replace with your desired color */
     border-bottom-left-radius: 100%;
     border-bottom-right-radius: 100%;
     overflow: hidden;
+    z-index: 1;
 }
 
+/* Starfield Canvas */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    z-index: 1; /* Place canvas behind content */
+}
+
+/* Text in Half-Circle */
 .half-circle-text {
     color: white;
-    /* Change to your desired text color */
+    background-color: #000;
     font-size: 4em;
-    /* Adjust as needed */
-    padding: 20px;
-    /* Optional padding */
-    margin: 25vh 0 0 0;
+    padding: 100px 20px 20px 20px;
+    margin: 0;
     text-transform: uppercase;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    position: relative; /* Ensure it's above the canvas */
 }
 
 #contact {
@@ -144,7 +156,6 @@ body {
     align-items: flex-start;
     padding: 50px 20px;
     background-color: #ffffff;
-    margin-top: 450px;
     margin-bottom: 50px;
 }
 
@@ -424,5 +435,74 @@ body {
     .navbar {
         padding: 10px 5%;
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .navbar.active {
+        z-index: 1;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        /* Below the navbar */
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        display: none;
+        /* Hide initially */
+    }
+
+    .nav-links.active {
+        padding: 0;
+        margin-top: 1%;
+        background-color: #ffffff;
+        width: 25%;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 280px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+        z-index: -1;
+        /* Slide down */
+    }
+
+    .hamburger {
+        display: block;
+        /* Show hamburger on mobile */
+    }
+
+    .navbar {
+        padding: 10px 5%;
+        font-size: 1rem;
+    }
+}
+
+/* Extra Small Devices (Mobile Phones) */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        width: 100%;
+        background-color: #022b3a;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        font-size: 0.9rem;
     }
 }

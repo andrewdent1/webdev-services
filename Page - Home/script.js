@@ -83,3 +83,52 @@ document.querySelector('.wow-button').addEventListener('click', function (e) {
         ripple.remove();
     }, 600); // Duration matches CSS animation
 });
+
+const canvas = document.getElementById('starfield');
+const context = canvas.getContext('2d');
+const stars = [];
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+function createStars(count) {
+    for (let i = 0; i < count; i++) {
+        stars.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            size: Math.random() * 2,
+            speed: Math.random() * 0.5
+        });
+    }
+}
+
+function updateStars() {
+    stars.forEach(star => {
+        star.x -= star.speed;
+        if (star.x < 0) star.x = canvas.width;
+    });
+}
+
+function drawStars() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.fillStyle = 'white';
+    stars.forEach(star => {
+        context.beginPath();
+        context.arc(star.x, star.y, star.size, 0, 2 * Math.PI);
+        context.fill();
+    });
+}
+
+function animate() {
+    updateStars();
+    drawStars();
+    requestAnimationFrame(animate);
+}
+
+createStars(200);
+animate();

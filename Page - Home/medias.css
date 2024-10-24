@@ -149,6 +149,7 @@
 
     #no {
         font-size: 1.25rem;
+        padding: 0px 25px;
     }
 }
 
@@ -163,6 +164,7 @@
 
     #no {
         font-size: 1.5rem;
+        padding: 0px 25px;
     }
 }
 
@@ -177,6 +179,7 @@
 
     #no {
         font-size: 1.75rem;
+        padding: 0px 25px;
     }
 }
 
@@ -204,17 +207,19 @@
     }
 
     .grid-item h3 {
-        padding-top: 10px;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     .grid-item p {
-        margin-top: -10px;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
 
     .grid-container {
         padding: 0 2%;
+    }
+
+    .features-button {
+        width: 40%;
     }
 }
 
@@ -228,17 +233,19 @@
     }
 
     .grid-item h3 {
-        padding-top: 10px;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 
     .grid-item p {
-        margin-top: -10px;
-        font-size: 1.0rem;
+        font-size: 1rem;
     }
 
     .grid-container {
         padding: 0 2%;
+    }
+
+    .features-button {
+        width: 30%;
     }
 }
 
@@ -252,17 +259,19 @@
     }
 
     .grid-item h3 {
-        padding-top: 10px;
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 
     .grid-item p {
-        margin-top: -10px;
-        font-size: 1.0rem;
+        font-size: 1rem;
     }
 
     .grid-container {
         padding: 0 2%;
+    }
+
+    .features-button {
+        width: 20%;
     }
 }
 
@@ -276,156 +285,138 @@
     }
 
     .grid-item h3 {
-        padding-top: 20px;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     .grid-item p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .grid-container {
         padding: 0 2%;
     }
+
+    .features-button {
+        width: 15%;
+    }
 }
 
-@media (min-width: 480px) {
+@media (max-width: 1500px) {
     #about-section {
-        padding: 50px 10px;
+        padding: 80px 40px;
     }
 
-    #about-h2 {
+    #about-top h2 {
         font-size: 2.2rem;
+    }
+
+    #about-top p {
+        font-size: 0.95rem;
+    }
+
+    #about-details img {
+        height: 200px;
+    }
+
+    #about-text {
+        padding: 0 20px;
+    }
+}
+
+/* For screens 1100px and below */
+@media (max-width: 1100px) {
+    #about-section {
+        padding: 60px 30px;
+    }
+
+    #about-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about-details img {
+        width: 80%;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    #about-text {
+        width: 80%;
+        padding: 0;
+        align-items: center;
         text-align: center;
     }
 
-    #about-p {
+    #about-top h2 {
+        font-size: 2rem;
+        padding: 20px;
+    }
+
+    #about-top p {
         font-size: 1.1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    }
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+    #about-section {
+        padding: 50px 20px;
     }
 
-    #about-details {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+    #about-top h2 {
+        font-size: 1.8rem;
     }
 
-    #about-img img {
-        width: 90%;
+    #about-top p {
+        font-size: 1rem;
     }
 
-    .offers {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .offer {
+    #about-details img {
         width: 100%;
-    }
-}
-
-@media (min-width: 768px) {
-    #about-section {
-        padding: 100px 50px;
+        height: 180px;
     }
 
-    #about-h2 {
-        font-size: 2.5rem;
-        display: flex;
+    #about-text {
+        width: 100%;
         text-align: center;
+        align-items: center;
     }
 
-    #about-p {
-        font-size: 1.25rem;
-    }
-
-    #about-details {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    #about-img {
-        width: 40%;
-    }
-
-    #what-we-offer {
-        width: 60%;
-        padding-left: 30px;
-    }
-
-    .offers {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    .offer {
-        width: 45%;
+    .about-button {
+        width: 80%;
+        margin: 20px auto;
+        font-size: 0.9rem;
     }
 }
 
-@media (min-width: 1100px) {
+/* For screens 480px and below */
+@media (max-width: 480px) {
     #about-section {
-        padding: 120px 80px;
+        padding: 40px 10px;
     }
 
-    #about-h2 {
-        font-size: 2.8rem;
-    }
-
-    #about-p {
-        font-size: 1.35rem;
-    }
-
-    #about-img {
-        width: 35%;
-    }
-
-    #what-we-offer {
-        width: 65%;
-        padding-left: 50px;
-    }
-
-    .offer {
-        width: 45%;
-    }
-}
-
-@media (min-width: 1500px) {
-    #about-section {
-        padding: 150px 100px;
-    }
-
-    #about-h2 {
-        font-size: 3rem;
-    }
-
-    #about-p {
+    #about-top h2 {
         font-size: 1.5rem;
     }
 
-    #about-img {
-        width: 30%;
+    #about-top p {
+        font-size: 0.9rem;
     }
 
-    #what-we-offer {
-        width: 66%;
-        padding-left: 50px;
+    #about-details img {
+        height: 150px;
     }
 
-    .offers {
-        flex-direction: row;
-        justify-content: space-between;
+    #about-text p {
+        font-size: 0.8rem;
+        line-height: 25px;
+        text-align: center;
+        align-items: center;
     }
 
-    .offer {
-        width: 40%;
+    .about-button {
+        width: 100%;
+        font-size: 0.8rem;
     }
 }
 

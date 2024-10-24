@@ -101,7 +101,7 @@ function showFAQs(category) {
         faqAnswer.innerText = faq.answer;
 
         faqQuestion.onclick = () => {
-            faqAnswer.style.display = faqAnswer.style.display === 'none' ? 'block' : 'none';
+            faqAnswer.classList.toggle('visible');
         };
 
         faqContainer.appendChild(faqQuestion);

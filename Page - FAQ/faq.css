@@ -144,7 +144,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 500px 50px 50px 50px;
+    padding: 55vh 50px 50px 50px;
 }
 
 #faq-head h1 {
@@ -200,14 +200,13 @@ p {
     /* Initially hide answers */
     padding: 10px 15px;
     border-bottom: 1px solid #cacaca;
-    background-color: #f9f9f9;
+    background-color: #f2f2f2;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-@media (max-width: 600px) {
-    .faq-category {
-        flex-direction: column;
-        align-items: center;
-    }
+.faq-answer.visible {
+    display: block;
 }
 
 .footer {
@@ -355,5 +354,109 @@ p {
     .navbar {
         padding: 10px 5%;
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 1500px) {
+    #faq-head h1 {
+        font-size: 2.2rem;
+    }
+
+    .faq-category button {
+        font-size: 0.95rem;
+        padding: 10px 15px;
+    }
+
+    .faq-question {
+        font-size: 1rem;
+    }
+
+    .faq-answer {
+        font-size: 0.95rem;
+    }
+}
+
+/* For screens 1100px and below */
+@media (max-width: 1100px) {
+    .half-circle-text {
+        font-size: 3rem;
+    }
+
+    #faq-head h1 {
+        font-size: 2rem;
+    }
+
+    #faq-head p {
+        font-size: 0.95rem;
+    }
+
+    .faq-category button {
+        width: 100%;
+        font-size: 0.7rem;
+        padding: 10px;
+    }
+
+    .faq-question {
+        font-size: 0.95rem;
+    }
+
+    .faq-answer {
+        font-size: 0.9rem;
+    }
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+    .half-circle-text {
+        font-size: 2rem;
+    }
+
+    #faq-head h1 {
+        font-size: 1.8rem;
+    }
+
+    .faq-category button {
+        width: 20%;
+        margin: 5px auto 25px auto;
+    }
+
+    .faq-question {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .faq-answer {
+        font-size: 0.85rem;
+        padding: 10px 15px;
+    }
+}
+
+/* For screens 480px and below */
+@media (max-width: 480px) {
+    #faq {
+        padding: 20px 10px;
+    }
+
+    #faq-head h1 {
+        font-size: 1.5rem;
+    }
+
+    #faq-head p {
+        font-size: 0.85rem;
+    }
+
+    .faq-category button {
+        width: 90%;
+        font-size: 0.75rem;
+        padding: 8px;
+        text-align: center;
+    }
+
+    .faq-question {
+        font-size: 0.85rem;
+    }
+
+    .faq-answer {
+        font-size: 0.8rem;
     }
 }

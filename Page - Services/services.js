@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Navbar behavior on scroll
-    window.onscroll = function() {
+    window.onscroll = function () {
         if (window.pageYOffset > sticky) {
             navbar.classList.add("scrolled"); // Add class for styling
             navbar.style.position = "fixed"; // Fix navbar to the top of the viewport
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Smooth scrolling to sections
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function(e) {
+        anchor.addEventListener("click", function (e) {
             e.preventDefault();
             document.querySelector(this.getAttribute("href")).scrollIntoView({
                 behavior: "smooth"

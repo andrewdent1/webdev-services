@@ -160,10 +160,6 @@
     #why-text ul {
         font-size: 1.1rem;
     }
-
-    #why-img img {
-        width: 45vw;
-    }
 }
 
 @media (max-width: 1100px) {
@@ -178,15 +174,22 @@
     #why-text ul {
         font-size: 1rem;
     }
-
-    #why-img img {
-        width: 50vw;
-    }
 }
 
 @media (max-width: 768px) {
     #why {
         padding: 40px 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #why-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 25px;
+        align-self: center;
+        text-align: center;
     }
 
     #why-text h3 {
@@ -194,17 +197,24 @@
     }
 
     #why-text ul {
-        font-size: 0.9rem;
-    }
-
-    #why-img img {
-        width: 45vw;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     #why {
         padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #why-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 25px;
+        align-self: center;
+        text-align: center;
     }
 
     #why-text h3 {
@@ -212,11 +222,7 @@
     }
 
     #why-text ul {
-        font-size: 0.8rem;
-    }
-
-    #why-img img {
-        width: 50vw;
+        font-size: 1rem;
     }
 }
 

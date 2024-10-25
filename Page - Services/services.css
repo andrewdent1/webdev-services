@@ -132,7 +132,8 @@ canvas {
     left: 0;
     width: 100%;
     height: 120%;
-    z-index: 1; /* Place canvas behind content */
+    z-index: 1;
+    /* Place canvas behind content */
 }
 
 /* Text in Half-Circle */
@@ -147,7 +148,8 @@ canvas {
     justify-content: center;
     align-items: center;
     height: 100%;
-    position: relative; /* Ensure it's above the canvas */
+    position: relative;
+    /* Ensure it's above the canvas */
 }
 
 #main h2 {
@@ -161,38 +163,47 @@ canvas {
 #main p {
     display: flex;
     justify-content: center;
-    margin: 0px 150px 20px 150px;
+    margin: 0px 200px 20px 200px;
     text-align: center;
+    font-size: 1.25rem;
 }
 
 #why {
-    padding: 100px 150px;
+    padding: 100px 200px;
     display: flex;
     justify-content: center;
 }
 
+#why-text {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 #why-text h3 {
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 2.25rem;
     padding-bottom: 15px;
 }
 
 #why-text ul {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 #why-img {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-
+    margin: 0 0 0 100px;
+    width: 60%;
 }
 
 #why-img img {
-    width: 50vw;
-    height: 25vh;
-    margin: 0 auto;
+    min-width: 353px;
+    min-height: 248px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
 #list {
@@ -204,8 +215,10 @@ canvas {
 }
 
 #reasons-section {
+    background-color: #000;
     display: flex;
     padding: 0 150px 50px 150px;
+    z-index: 0;
 }
 
 #reasons-img img {
@@ -481,4 +494,85 @@ canvas {
         padding: 10px 5%;
         font-size: 1rem;
     }
+}
+
+/* KEYFRAMES */
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.spinner-box {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+/* SOLAR SYSTEM */
+
+.solar-system {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orbit {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fafbfC;
+    border-radius: 50%;
+}
+
+.earth-orbit {
+    width: 165px;
+    height: 165px;
+    -webkit-animation: spin 12s linear 0s infinite;
+}
+
+.venus-orbit {
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 7.4s linear 0s infinite;
+}
+
+.mercury-orbit {
+    width: 90px;
+    height: 90px;
+    -webkit-animation: spin 3s linear 0s infinite;
+}
+
+.planet {
+    position: absolute;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3ff9dc;
+}
+
+.sun {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #ffab91;
+}
+
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }

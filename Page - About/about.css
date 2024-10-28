@@ -160,7 +160,7 @@ canvas {
 }
 
 #intro-text {
-    padding-right: 50px;
+    padding: 0px 50px 0px 0px;
 }
 
 #intro h2 {
@@ -231,11 +231,12 @@ canvas {
     padding: 150px 75px;
 }
 
-#process h2 {
-    font-size: 2rem;
-    font-weight: 500;
+#process-text h2 {
+    display: flex;
+    justify-content: center;
     text-transform: uppercase;
-    padding-bottom: 75px;
+    font-size: 2.5rem;
+    font-weight: 500;
 }
 
 #process-text p {
@@ -257,7 +258,7 @@ canvas {
 }
 
 .process-step {
-    background-color: #eaebf0;
+    background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     padding: 50px 20px;

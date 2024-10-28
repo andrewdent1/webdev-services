@@ -153,6 +153,13 @@
         padding: 80px 100px;
     }
 
+    #why-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
     #why-text h3 {
         font-size: 1.8rem;
     }
@@ -164,7 +171,7 @@
 
 @media (max-width: 1100px) {
     #why {
-        padding: 60px 80px;
+        padding: 60px 20px;
     }
 
     #why-text h3 {
@@ -174,11 +181,16 @@
     #why-text ul {
         font-size: 1rem;
     }
+
+    #why-text {
+        width: 100%;
+        padding: 0;
+    }
 }
 
 @media (max-width: 768px) {
     #why {
-        padding: 40px 50px;
+        padding: 40px 100px;
         display: flex;
         flex-direction: column;
     }
@@ -190,6 +202,7 @@
         padding-bottom: 25px;
         align-self: center;
         text-align: center;
+        width: 100%;
     }
 
     #why-text h3 {
@@ -198,6 +211,10 @@
 
     #why-text ul {
         font-size: 1rem;
+    }
+
+    #why-img {
+        margin: 0 auto;
     }
 }
 
@@ -223,86 +240,6 @@
 
     #why-text ul {
         font-size: 1rem;
-    }
-}
-
-@media (max-width: 1500px) {
-    #reasons-section {
-        padding: 0 100px 50px 100px;
-    }
-
-    #reasons-img img {
-        width: 20vw;
-        height: 60vh;
-        margin-right: 50px;
-    }
-
-    .reason h4 {
-        font-size: 1.4rem;
-    }
-
-    .reason p {
-        font-size: 1rem;
-        padding-bottom: 40px;
-    }
-}
-
-/* For screens 1100px and below */
-@media (max-width: 1100px) {
-    #reasons-section {
-        padding: 0 80px 50px 80px;
-    }
-
-    #reasons-img {
-        display: none;
-        /* Hides the image */
-    }
-
-    #reasons-img img {
-        width: 25vw;
-        height: 50vh;
-        margin-right: 30px;
-    }
-
-    .reason h4 {
-        font-size: 1.3rem;
-    }
-
-    .reason p {
-        font-size: 0.95rem;
-        padding-bottom: 35px;
-    }
-}
-
-/* For screens 768px and below */
-@media (max-width: 768px) {
-    #reasons-section {
-        padding: 0 20px 50px 20px;
-    }
-
-    .reason h4 {
-        font-size: 1.2rem;
-    }
-
-    .reason p {
-        font-size: 0.9rem;
-        padding-bottom: 30px;
-    }
-}
-
-/* For screens 480px and below */
-@media (max-width: 480px) {
-    #reasons-section {
-        padding: 0 10px 50px 10px;
-    }
-
-    .reason h4 {
-        font-size: 1.1rem;
-    }
-
-    .reason p {
-        font-size: 0.85rem;
-        padding-bottom: 25px;
     }
 }
 

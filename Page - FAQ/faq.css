@@ -139,7 +139,7 @@ canvas {
 .half-circle-text {
     color: white;
     background-color: #000;
-    font-size: 4em;
+    font-size: 3.5rem;
     padding: 100px 20px 20px 20px;
     margin: 0;
     text-transform: uppercase;
@@ -162,14 +162,18 @@ canvas {
 
 #faq-head h1 {
     padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#faq-head p {
+    font-size: 1.25rem;
+    padding-bottom: 25px;
 }
 
 #faq-head h1,
 p {
     display: flex;
     justify-content: center;
-    padding: 25px 0px;
-
 }
 
 .faq-category {
@@ -241,7 +245,7 @@ p {
 }
 
 .footer-section-1 {
-    max-width: 30vw;
+    width: 30vw;
 }
 
 .footer-logo {
@@ -270,7 +274,7 @@ p {
     border-radius: 5px;
     font-weight: bold;
     margin-top: 20px;
-    width: 50%;
+    width: 100%;
     text-align: center;
 }
 
@@ -335,6 +339,10 @@ p {
 .footer-item-img {
     width: 25px;
     padding-right: 10px;
+}
+
+.color-icon {
+    scale: 10;
 }
 
 @media (max-width: 850px) {

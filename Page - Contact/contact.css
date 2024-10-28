@@ -139,8 +139,7 @@ canvas {
 .half-circle-text {
     color: white;
     background-color: #000;
-    font-size: 4em;
-    padding: 100px 20px 20px 20px;
+    font-size: 3.5rem;    padding: 100px 20px 20px 20px;
     margin: 0;
     text-transform: uppercase;
     display: flex;

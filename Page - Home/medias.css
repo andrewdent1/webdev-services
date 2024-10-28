@@ -616,6 +616,10 @@
 }
 
 @media (max-width: 600px) {
+    .footer {
+        padding: 30px 25px;
+    }
+    
     #footer-contact {
         display: none;
     }

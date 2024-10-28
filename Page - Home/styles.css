@@ -171,7 +171,6 @@ body {
     text-align: center;
     margin: 25px auto 25px auto;
     scale: 1.1;
-    font-weight: 600;
     letter-spacing: 3px;
 }
 
@@ -326,7 +325,6 @@ canvas {
 }
 
 .whatwedo-grid button {
-    font-weight: 600;
     padding: 15px 25px;
     font-size: 1rem;
     text-transform: uppercase;
@@ -420,7 +418,6 @@ canvas {
     z-index: 10; /* Ensure it's above other elements */
     position: relative; /* To work with z-index */
     cursor: pointer; 
-    font-weight: 600;
 }
 
 .about-button:hover {
@@ -585,47 +582,38 @@ canvas {
     color: #777;
 }
 
-#footer-button {
-    display: inline-block;
-    /* Better for consistent inline behavior */
-    padding: 10px 20px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    border: 2px solid #001f3f;
-    /* Add border to ensure clear visibility */
-    border-radius: 5px;
-    background-color: white;
-    color: #001f3f;
-    text-align: center;
-    margin: 20px auto;
-    cursor: pointer;
+#pricing-button {
     width: 100%;
-    transition: all 0.3s ease;
-    /* Smoother transition */
-    font-weight: 600;
-    text-decoration: none;
+    padding: 10px 15px;
+    margin: 25px 0 10px 0;
+    background-color: white;
+    color: #022b3a;
+    border-radius: 10px;
+    font-size: 1rem;
 }
 
-#footer-button:hover {
+#pricing-button:hover {
     background-color: #001f3f;
     color: white;
     transform: scale(1.05);
+    transition: transform 0.5s, color 0.5s, background-color 0.5s;
+    border: 1px solid white;
 }
 
 .footer {
     background-color: #022b3a;
     color: #ffffff;
-    padding: 100px 0 50px 0;
+    padding: 50px;
 }
 
-.footer-container {
+.container {
     width: 90%;
     margin: 0 auto;
     max-width: 1200px;
 }
 
 .footer-section-1 {
-    max-width: 30vw;
+    width: 30vw;
 }
 
 .footer-logo {
@@ -645,7 +633,7 @@ canvas {
     color: #cccccc;
 }
 
-#cta-button {
+#footer-button {
     display: inline-block;
     background-color: #ffffff;
     color: #0f2a44;
@@ -653,8 +641,9 @@ canvas {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    margin-bottom: 20px;
-    width: 50%;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
 }
 
 .footer-links {
@@ -718,6 +707,10 @@ canvas {
 .footer-item-img {
     width: 25px;
     padding-right: 10px;
+}
+
+.color-icon {
+    scale: 10;
 }
 
 @media (max-width: 1024px) {

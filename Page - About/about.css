@@ -140,7 +140,7 @@ canvas {
 .half-circle-text {
     color: white;
     background-color: #000;
-    font-size: 4em;
+    font-size: 3.5rem;
     padding: 100px 20px 20px 20px;
     margin: 0;
     text-transform: uppercase;
@@ -159,9 +159,6 @@ canvas {
     padding: 50px 50px 50px 100px;
 }
 
-#intro-text {
-    padding: 0px 50px 0px 0px;
-}
 
 #intro h2 {
     font-size: 3rem;
@@ -176,8 +173,12 @@ canvas {
     padding-bottom: 25px;
 }
 
+#intro-text {
+    width: 70%;
+}
+
 #intro-img {
-    width: 40vw;
+    width: 30vw;
 }
 
 #intro-img img {
@@ -365,7 +366,7 @@ canvas {
 }
 
 .footer-section-1 {
-    max-width: 30vw;
+    width: 30vw;
 }
 
 .footer-logo {
@@ -394,7 +395,7 @@ canvas {
     border-radius: 5px;
     font-weight: bold;
     margin-top: 20px;
-    width: 50%;
+    width: 100%;
     text-align: center;
 }
 
@@ -459,6 +460,10 @@ canvas {
 .footer-item-img {
     width: 25px;
     padding-right: 10px;
+}
+
+.color-icon {
+    scale: 10;
 }
 
 @media (max-width: 850px) {

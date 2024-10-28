@@ -140,7 +140,7 @@ canvas {
 .half-circle-text {
     color: white;
     background-color: #000;
-    font-size: 4em;
+    font-size: 3.5rem;
     padding: 100px 20px 20px 20px;
     margin: 0;
     text-transform: uppercase;
@@ -266,7 +266,7 @@ canvas {
 }
 
 .footer-section-1 {
-    max-width: 30vw;
+    width: 30vw;
 }
 
 .footer-logo {
@@ -286,7 +286,7 @@ canvas {
     color: #cccccc;
 }
 
-.cta-button {
+#footer-button {
     display: inline-block;
     background-color: #ffffff;
     color: #0f2a44;
@@ -295,7 +295,7 @@ canvas {
     border-radius: 5px;
     font-weight: bold;
     margin-top: 20px;
-    width: 50%;
+    width: 100%;
     text-align: center;
 }
 
@@ -360,6 +360,10 @@ canvas {
 .footer-item-img {
     width: 25px;
     padding-right: 10px;
+}
+
+.color-icon {
+    scale: 10;
 }
 
 #pricing {
@@ -510,4 +514,26 @@ canvas {
         padding: 10px 5%;
         font-size: 1rem;
     }
+}
+
+.contact-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    padding: 10px 15px;
+    margin: 50px auto 0 auto;
+    background-color: white;
+    color: #022b3a;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.contact-button:hover {
+    background-color: #001f3f;
+    color: white;
+    transform: scale(1.05);
+    transition: transform 0.5s, color 0.5s, background-color 0.5s;
+    border: 1px solid white;
 }

@@ -236,6 +236,7 @@ canvas {
     justify-content: center;
     text-transform: uppercase;
     font-size: 2.5rem;
+    padding-bottom: 50px;
     font-weight: 500;
 }
 
@@ -263,6 +264,11 @@ canvas {
     border-radius: 25px;
     padding: 50px 20px;
     margin: 0px 25px;
+}
+
+.process-step:hover {
+    scale: 1.05;
+    transform: scale 1s;
 }
 
 .process-step h4 {
@@ -305,6 +311,47 @@ canvas {
     background-color: #e1e5f2;
 }
 
+#team {
+    padding: 100px;
+    background-color: #e1e5f2;
+}
+
+#team h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding-bottom: 50px;
+}
+
+#team-members {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+}
+
+.members {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.members img {
+    width: 7.5vw;
+    padding-bottom: 20px;
+    border-radius: 50px;
+}
+
+.members h3 {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
 .footer {
     background-color: #022b3a;
     color: #ffffff;
@@ -338,7 +385,7 @@ canvas {
     color: #cccccc;
 }
 
-.cta-button {
+#footer-button {
     display: inline-block;
     background-color: #ffffff;
     color: #0f2a44;

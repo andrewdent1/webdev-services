@@ -223,7 +223,7 @@
     }
 
     .features-button {
-        width: 40%;
+        width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -257,7 +257,7 @@
     }
 
     .features-button {
-        width: 30%;
+        width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -338,8 +338,9 @@
         font-size: 2.2rem;
     }
 
-    #about-top p {
-        font-size: 0.95rem;
+    #about-details {
+        flex-direction: column;
+        align-items: center;
     }
 
     #about-details img {
@@ -347,7 +348,13 @@
     }
 
     #about-text {
-        padding: 0 20px;
+        padding: 0;
+        width: 90%;
+    }
+
+    #nebula {
+        max-width: 80vw;
+        margin-bottom: 50px;
     }
 }
 
@@ -357,11 +364,6 @@
         padding: 60px 30px;
     }
 
-    #about-details {
-        flex-direction: column;
-        align-items: center;
-    }
-
     #about-details img {
         width: 80%;
         height: 200px;
@@ -369,10 +371,14 @@
     }
 
     #about-text {
-        width: 80%;
         padding: 0;
-        align-items: center;
-        text-align: center;
+        width: 90%;
+        font-size: 1.25rem;
+    }
+
+    #nebula {
+        max-width: 80vw;
+        margin-bottom: 50px;
     }
 
     #about-top h2 {
@@ -381,7 +387,7 @@
     }
 
     #about-top p {
-        font-size: 1.1rem;
+        font-size: 1.25rem;
     }
 }
 
@@ -408,6 +414,8 @@
         width: 100%;
         text-align: center;
         align-items: center;
+        font-size: 1rem;
+
     }
 
     .about-button {
@@ -604,5 +612,20 @@
 
     .price {
         font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #footer-contact {
+        display: none;
+    }
+    
+    #footer button {
+        width: 100%;
+    }
+
+    .footer-section-1 {
+        width: 60vw;
+        padding-right: 20px;
     }
 }

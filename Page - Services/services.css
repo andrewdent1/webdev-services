@@ -216,20 +216,41 @@ canvas {
 }
 
 #reasons-section {
+    z-index: 0;
+    background: linear-gradient(to top, #001f3f, #ffffff);
+    color: #001f3f;
+    padding: 25px 50px 100px 50px;
+    gap: 10px;
+}
+
+#reasons {
     display: flex;
     flex-wrap: wrap;
-    padding: 50px 0px 0px 0px;
-    z-index: 0;
+    justify-content: center;
+    align-items: stretch;
+    gap: 50px;
+}
+
+.reason {
+    flex: 0 1 calc(50% - 50px);
+    width: 50vw;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.reason:hover {
+    scale: 1.05;
+    transition: scale 0.1s;
 }
 
 .reason h4 {
     font-size: 1.5rem;
-    padding-bottom: 10px;
-    color: #022b3a;
-}
-
-.reason p {
-    color: #022b3a;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer {
@@ -431,7 +452,7 @@ canvas {
     color: #777;
 }
 
-.cta-button {
+#footer-button {
     padding: 10px 20px;
     font-size: 1rem;
     text-transform: uppercase;

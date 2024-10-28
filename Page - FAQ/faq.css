@@ -261,7 +261,7 @@ p {
     color: #cccccc;
 }
 
-.cta-button {
+#footer-button {
     display: inline-block;
     background-color: #ffffff;
     color: #0f2a44;
@@ -552,5 +552,20 @@ p {
         padding: 10px;
         text-align: center;
         font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #footer-contact {
+        display: none;
+    }
+    
+    #footer button {
+        width: 100%;
+    }
+
+    .footer-section-1 {
+        width: 60vw;
+        padding-right: 20px;
     }
 }

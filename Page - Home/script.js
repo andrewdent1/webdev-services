@@ -131,3 +131,4 @@ function animateStarfield() {
 
 createStars(200);
 animateStarfield();
+

@@ -102,7 +102,7 @@
                         issues are quickly resolved, giving you peace of mind at all times.</p>
                 </div>
             </div>
-            <button onclick="window.location.href='/Page - Services/services.html'">SEE ALL FEATURES</button>
+            <button onclick="window.location.href='/Page - Services/services.html'" class="features-button">SEE ALL FEATURES</button>
         </section>
     
         <section id="about-section">
@@ -113,7 +113,9 @@
                         in Central Florida and beyond.</p>
                 </div>
                 <div id="about-details">
-                        <img src="Images/unnamed.png" alt="">
+                    <video autoplay loop muted plays-inline id="nebula">
+                        <source src="/Page - Home/Images/nebula.mp4" type="video/mp4">
+                    </video>
                         <div id="about-text">
                             <p>We offer $0 down for a standard 5 page small business website. If you need more than that
                             then we
@@ -151,7 +153,7 @@
                     </ul>
                     <div class="price">
                         <p>$1,900 <span>+$25/mo Hosting</span></p>
-                        <button id="cta-button">VIEW MORE</button>
+                        <button id="cta-button" onclick="window.location.href='/Page - Services/services.html'">VIEW MORE</button>
                     </div>
                 </div>
                 <div id="monthly-plan">
@@ -166,7 +168,7 @@
                     </ul>
                     <div class="price">
                         <p>$199 <span>per month</span></p>
-                        <button id="cta-button">VIEW MORE</button>
+                        <button id="cta-button" onclick="window.location.href='/Page - Services/services.html'">VIEW MORE</button>
 
                     </div>
                 </div>
@@ -186,7 +188,7 @@
                             needs to
                             be. Let us make you something amazing.
                         </p>
-                        <a href="#" class="cta-button">Get Started Today</a>
+                        <a href="#" id="footer-button">Get Started Today</a>
                     </div>
                     <div>
                         <h3>Quick Links</h3>
@@ -198,7 +200,7 @@
                             <li><a href="/Page - Contact/contact.html">Contact</a></li>
                         </ul>
                     </div>
-                    <div>
+                    <div id="footer-contact">
                         <h3>Contact Information</h3>
                         <ul>
                             <li><img src="/Images/phone.png" alt="" class="footer-item-img">(407) 701-3739

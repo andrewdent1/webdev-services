@@ -157,7 +157,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
 
     #why-text h3 {
@@ -243,6 +242,53 @@
     }
 }
 
+@media (max-width: 1100px) {
+    .reason h4 {
+        font-size: 1.35rem;
+    }
+
+    .reason p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .reason h4 {
+        font-size: 1.15rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reason p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 850px) {
+    #reasons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reason {
+        width: 100%;
+    }
+
+    .reason h4 {
+        font-size: 1.05rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reason p {
+        font-size: 0.85rem;
+    }
+}
+
 @media (max-width: 850px) {
     .navbar.active {
         z-index: 1;
@@ -309,5 +355,20 @@
         padding: 10px;
         text-align: center;
         font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #footer-contact {
+        display: none;
+    }
+    
+    #footer button {
+        width: 100%;
+    }
+
+    .footer-section-1 {
+        width: 60vw;
+        padding-right: 20px;
     }
 }

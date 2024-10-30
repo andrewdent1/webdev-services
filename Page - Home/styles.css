@@ -603,6 +603,7 @@ canvas {
     background-color: white;
     color: #022b3a;
     border-radius: 10px;
+    border: 1px solid #022b3a;
     font-size: 1rem;
 }
 
@@ -871,4 +872,17 @@ canvas {
         padding: 8px 15px;
         font-size: 0.8rem;
     }
+}
+
+/* Initially hide elements */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+/* Make visible when scrolled into view */
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

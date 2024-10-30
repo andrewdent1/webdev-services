@@ -106,27 +106,27 @@ function drawStars() {
     });
 }
 
-document.addEventListener("DOMContentLoaded",function(){
-  
-    var body=document.body;
-     setInterval(createStar,100);
-     function createStar(){
-       var right=Math.random()*500;
-       var top=Math.random()*screen.height;
-       var star=document.createElement("div");
-    star.classList.add("star")
-     body.appendChild(star);
-     setInterval(runStar,10);
-       star.style.top=top+"px";
-     function runStar(){
-       if(right>=screen.width){
-         star.remove();
-       }
-       right+=3;
-       star.style.right=right+"px";
-     }
-     } 
-   })
+document.addEventListener("DOMContentLoaded", function () {
+
+    var body = document.body;
+    setInterval(createStar, 100);
+    function createStar() {
+        var right = Math.random() * 500;
+        var top = Math.random() * screen.height;
+        var star = document.createElement("div");
+        star.classList.add("star")
+        body.appendChild(star);
+        setInterval(runStar, 10);
+        star.style.top = top + "px";
+        function runStar() {
+            if (right >= screen.width) {
+                star.remove();
+            }
+            right += 3;
+            star.style.right = right + "px";
+        }
+    }
+})
 
 // Animate the starfield
 function animate() {
@@ -137,3 +137,26 @@ function animate() {
 
 createStars(200); // Adjust the number of stars as needed
 animate();
+
+document.addEventListener("DOMContentLoaded", function () {
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+
+    function revealOnScroll() {
+        const viewportHeight = window.innerHeight;
+
+        revealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const triggerPoint = 100; // Adjust this value to trigger earlier or later
+
+            if (elementTop < viewportHeight - triggerPoint) {
+                element.classList.add('visible');
+            }
+        });
+    }
+
+    // Listen for scroll events
+    window.addEventListener('scroll', revealOnScroll);
+
+    // Initial check for elements already in view
+    revealOnScroll();
+});

@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Navbar behavior on scroll
-    window.onscroll = function() {
+    window.onscroll = function () {
         if (window.pageYOffset > sticky) {
             navbar.classList.add("scrolled"); // Add class for styling
             navbar.style.position = "fixed"; // Fix navbar to the top of the viewport
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Smooth scrolling to sections
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function(e) {
+        anchor.addEventListener("click", function (e) {
             e.preventDefault();
             document.querySelector(this.getAttribute("href")).scrollIntoView({
                 behavior: "smooth"
@@ -61,9 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-document.getElementById('appointment-form').addEventListener('submit', function(event) {
+document.getElementById('appointment-form').addEventListener('submit', function (event) {
     event.preventDefault();
-    
+
     // Collect form data
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
@@ -135,3 +135,26 @@ function animate() {
 
 createStars(200); // Adjust the number of stars as needed
 animate();
+
+document.addEventListener("DOMContentLoaded", function () {
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+
+    function revealOnScroll() {
+        const viewportHeight = window.innerHeight;
+
+        revealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const triggerPoint = 100; // Adjust this value to trigger earlier or later
+
+            if (elementTop < viewportHeight - triggerPoint) {
+                element.classList.add('visible');
+            }
+        });
+    }
+
+    // Listen for scroll events
+    window.addEventListener('scroll', revealOnScroll);
+
+    // Initial check for elements already in view
+    revealOnScroll();
+});

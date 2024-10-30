@@ -132,3 +132,26 @@ function animateStarfield() {
 createStars(200);
 animateStarfield();
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+
+    function revealOnScroll() {
+        const viewportHeight = window.innerHeight;
+
+        revealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const triggerPoint = 100; // Adjust this value to trigger earlier or later
+
+            if (elementTop < viewportHeight - triggerPoint) {
+                element.classList.add('visible');
+            }
+        });
+    }
+
+    // Listen for scroll events
+    window.addEventListener('scroll', revealOnScroll);
+
+    // Initial check for elements already in view
+    revealOnScroll();
+});

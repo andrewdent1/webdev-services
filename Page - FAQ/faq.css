@@ -27,9 +27,11 @@ body {
     color: black;
     font-size: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    min-height: 10vh;
 }
 
 .logo img {
+    min-height: 4vh;
     width: 15vw;
     display: flex;
     align-items: center;
@@ -132,7 +134,8 @@ canvas {
     left: 0;
     width: 100%;
     height: 120%;
-    z-index: 1; /* Place canvas behind content */
+    z-index: 1;
+    /* Place canvas behind content */
 }
 
 /* Text in Half-Circle */
@@ -147,7 +150,8 @@ canvas {
     justify-content: center;
     align-items: center;
     height: 100%;
-    position: relative; /* Ensure it's above the canvas */
+    position: relative;
+    /* Ensure it's above the canvas */
     text-align: center;
 }
 
@@ -433,6 +437,11 @@ p {
     .faq-answer {
         font-size: 0.9rem;
     }
+
+    .half-circle-text {
+        display: flex;
+        font-size: 3rem;
+    }
 }
 
 /* For screens 768px and below */
@@ -535,6 +544,11 @@ p {
         padding: 10px 5%;
         font-size: 1rem;
     }
+
+    .half-circle-text {
+        display: flex;
+        font-size: 3rem;
+    }
 }
 
 /* Extra Small Devices (Mobile Phones) */
@@ -561,13 +575,18 @@ p {
         text-align: center;
         font-size: 0.9rem;
     }
+
+    .half-circle-text {
+        display: flex;
+        font-size: 2.5rem;
+    }
 }
 
 @media (max-width: 600px) {
     #footer-contact {
         display: none;
     }
-    
+
     #footer button {
         width: 100%;
     }

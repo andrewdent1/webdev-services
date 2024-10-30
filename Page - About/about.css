@@ -12,6 +12,7 @@ body {
 
 .navbar {
     position: absolute;
+    min-height: 10vh;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
@@ -31,6 +32,7 @@ body {
 
 .logo img {
     width: 15vw;
+    min-height: 4vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,7 +209,7 @@ canvas {
 }
 
 .astronaut {
-    padding: 0;
+    padding-bottom: 120px;
     margin: 0;
     position: absolute;
     display: flex;

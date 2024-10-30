@@ -132,7 +132,6 @@ function animateStarfield() {
 createStars(200);
 animateStarfield();
 
-
 document.addEventListener("DOMContentLoaded", function () {
     const revealElements = document.querySelectorAll('.scroll-reveal');
 

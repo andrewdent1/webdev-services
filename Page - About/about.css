@@ -209,7 +209,6 @@ canvas {
 }
 
 .astronaut {
-    margin: auto 0;
     position: absolute;
     display: flex;
     align-items: center;

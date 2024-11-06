@@ -70,16 +70,17 @@ document.getElementById('appointment-form').addEventListener('submit', function 
     const phone = document.getElementById('phone').value;
     const message = document.getElementById('message').value;
 
-    // Perform form validation
-    if (name && email && phone && message) {
-        alert("Thank you for your message! We'll get back to you shortly.");
-        // Reset form
-        document.getElementById('appointment-form').reset();
-    } else {
-        alert("Please fill in all fields.");
-    }
+    emailjs.send("service_ffk6nba", "template_pnlbj4g", {
+        from_name: name,
+        from_email: email,
+        message: message
+    })
+    .then(function(response) {
+        alert("Message sent successfully!");
+    }, function(error) {
+        alert("Failed to send message. Please try again.");
+    });
 });
-
 
 const canvas = document.getElementById('starfield');
 const context = canvas.getContext('2d');

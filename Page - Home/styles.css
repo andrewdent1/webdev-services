@@ -117,6 +117,74 @@ body {
     border: 1px solid white;
 }
 
+@media (max-width: 850px) {
+    .navbar.active {
+        z-index: 1;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        /* Below the navbar */
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        display: none;
+        /* Hide initially */
+    }
+
+    .nav-links.active {
+        padding: 0;
+        margin-top: 1%;
+        background-color: #ffffff;
+        width: 25%;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 280px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+        z-index: -1;
+        /* Slide down */
+    }
+
+    .hamburger {
+        display: block;
+        /* Show hamburger on mobile */
+    }
+
+    .logo img {
+        min-width: 100px;
+    }
+}
+
+/* Extra Small Devices (Mobile Phones) */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        width: 100%;
+        background-color: #022b3a;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+}
+
 #intro {
     margin: 0px 0px 100px 0px;
     padding: 250PX 200px 100px 200px;
@@ -271,11 +339,12 @@ canvas {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     width: 100%;
     max-width: 1500px;
     justify-items: center;
+    padding: 0 2%;
 }
 
 .grid-item {
@@ -326,10 +395,9 @@ canvas {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
     background-color: #eaf4ff;
     background-blend-mode: multiply;
-    /* Layer the background image with the color */
 }
 
-.whatwedo-grid button {
+.features-button {
     padding: 15px 25px;
     font-size: 1rem;
     text-transform: uppercase;
@@ -340,20 +408,82 @@ canvas {
     width: 20vw;
     text-align: center;
     margin: 50px auto 25px auto;
-    scale: 1.1;
     z-index: 10;
-    /* Ensure it's above other elements */
     position: relative;
-    /* To work with z-index */
     cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
 
-.whatwedo-grid button:hover {
+.features-button:hover {
     background-color: black;
     color: white;
     transform: scale(1.05);
     transition: transform 0.5s, color 0.5s, background-color 0.5s;
-    border: 1px solid white;
+}
+
+@media (max-width: 480px) {
+    #key-features {
+        font-size: 2.2rem;
+    }
+
+    canvas {
+        height: 250%;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .grid-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .grid-item p {
+        font-size: 0.9rem;
+    }
+
+    .grid-container {
+        padding: 0 2%;
+    }
+
+    .features-button {
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .whatwedo-grid {
+        padding: 100px 0px;
+    }
+
+    canvas {
+        height: 250%;
+    }
+
+    #key-features {
+        font-size: 2.5rem;
+    }
+
+    .grid-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .grid-item p {
+        font-size: 1rem;
+    }
+
+    .grid-container {
+        padding: 0 2%;
+    }
+
+    .features-button {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 #about-section {
@@ -474,6 +604,7 @@ canvas {
     background-color: white;
     z-index: 1;
     position: relative;
+    text-align: center;
 }
 
 /* Nebula Background */
@@ -728,160 +859,12 @@ canvas {
     scale: 10;
 }
 
-@media (max-width: 1024px) {
-    #intro {
-        flex-direction: column;
-        padding: 150px 50px 50px 50px;
-        text-align: center;
-    }
-
-    #intro h1 {
-        font-size: 3rem;
-    }
-
-    #intro h2 {
-        font-size: 1.2rem;
-    }
-
-    #intro p {
-        font-size: 1rem;
-    }
-
-    #intro-text,
-    #intro-img {
-        width: 80vw;
-    }
-
-    .wow-button {
-        width: 20vw;
-    }
-}
-
-/* For Smaller Devices (Tablets & Phones) */
-@media (max-width: 850px) {
-    .navbar.active {
-        z-index: 1;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 70px;
-        /* Below the navbar */
-        right: 0;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-end;
-        display: none;
-        /* Hide initially */
-    }
-
-    .nav-links.active {
-        padding: 0;
-        margin-top: 1%;
-        background-color: #ffffff;
-        width: 25%;
-        border-radius: 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 280px;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-        z-index: -1;
-        /* Slide down */
-    }
-
-    .hamburger {
-        display: block;
-        /* Show hamburger on mobile */
-    }
-
-    .navbar {
-        padding: 10px 5%;
-        font-size: 1rem;
-    }
-
-    #intro {
-        padding: 100px 30px 30px 30px;
-    }
-
-    #intro h1 {
-        font-size: 2.5rem;
-    }
-
-    #intro h2 {
-        font-size: 1rem;
-    }
-
-    #intro p {
-        font-size: 0.9rem;
-    }
-
-    .wow-button {
-        width: 30vw;
-    }
-}
-
-/* Extra Small Devices (Mobile Phones) */
-@media (max-width: 480px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
-
-    .navbar-container {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .nav-links {
-        width: 100%;
-        background-color: #022b3a;
-    }
-
-    .nav-links a {
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-        font-size: 0.9rem;
-    }
-
-    #intro {
-        padding: 80px 20px 20px 20px;
-    }
-
-    #intro h1 {
-        font-size: 2rem;
-    }
-
-    #intro h2 {
-        font-size: 0.9rem;
-    }
-
-    #intro p {
-        font-size: 0.8rem;
-    }
-
-    #intro-text,
-    #intro-img {
-        width: 100%;
-    }
-
-    .wow-button {
-        width: 50vw;
-        padding: 8px 15px;
-        font-size: 0.8rem;
-    }
-}
-
-/* Initially hide elements */
 .scroll-reveal {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s, transform 0.6s;
 }
 
-/* Make visible when scrolled into view */
 .scroll-reveal.visible {
     opacity: 1;
     transform: translateY(0);

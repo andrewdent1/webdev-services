@@ -96,7 +96,7 @@
     }
 
     #intro h1 {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
     }
 
     #intro h2 {
@@ -119,7 +119,7 @@
 }
 
 #whatwedo {
-    padding: 50px 0 100px 0;
+    padding: 50px 5% 100px 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -221,14 +221,6 @@
     .grid-container {
         padding: 0 2%;
     }
-
-    .features-button {
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
 }
 
 @media (min-width: 768px) {
@@ -254,14 +246,6 @@
 
     .grid-container {
         padding: 0 2%;
-    }
-
-    .features-button {
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
     }
 }
 
@@ -289,14 +273,6 @@
     .grid-container {
         padding: 0 2%;
     }
-
-    .features-button {
-        width: 20%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
 }
 
 @media (min-width: 1500px) {
@@ -318,14 +294,6 @@
 
     .grid-container {
         padding: 0 2%;
-    }
-
-    .features-button {
-        width: 15%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
     }
 }
 
@@ -437,6 +405,7 @@
 
     #about-top p {
         font-size: 0.9rem;
+        line-height: 25px;
     }
 
     #about-details img {
@@ -444,19 +413,20 @@
     }
 
     #about-text p {
-        font-size: 0.8rem;
-        line-height: 25px;
+        font-size: 0.9rem;
         text-align: center;
         align-items: center;
+        line-height: 25px;
+
     }
 
     .about-button {
-        width: 100%;
+        width: 50%;
         font-size: 0.8rem;
     }
 }
 
-@media (min-width: 480px) {
+@media (max-width: 480px) {
     #portfolio {
         padding: 60px 30px;
     }
@@ -515,6 +485,29 @@
         padding: 50px 100px;
         margin: 50px 350px;
         font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 320px) {
+    #pricing {
+        padding: 40px 1%;
+    }
+
+    #lump-sum,
+    #monthly-plan {
+        width: 90%;
+    }
+
+    #pricing h2 {
+        font-size: 2.2rem;
+    }
+
+    .features li {
+        font-size: 1.1rem;
+    }
+
+    .price {
+        font-size: 1.4rem;
     }
 }
 

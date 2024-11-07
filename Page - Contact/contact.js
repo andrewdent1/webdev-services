@@ -1,3 +1,5 @@
+emailjs.init("YOUR_USER_ID");
+
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.getElementById("navbar");
     const hamburger = document.getElementById("hamburger");
@@ -58,27 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 behavior: "smooth"
             });
         });
-    });
-});
-
-document.getElementById('appointment-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    // Collect form data
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const message = document.getElementById('message').value;
-
-    emailjs.send("service_ffk6nba", "template_pnlbj4g", {
-        from_name: name,
-        from_email: email,
-        message: message
-    })
-    .then(function(response) {
-        alert("Message sent successfully!");
-    }, function(error) {
-        alert("Failed to send message. Please try again.");
     });
 });
 

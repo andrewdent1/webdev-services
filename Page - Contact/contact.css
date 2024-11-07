@@ -403,43 +403,31 @@ canvas {
     scale: 10;
 }
 
-@media (max-width: 850px) {
-    .nav-links {
-        position: absolute;
-        top: 70px;
-        /* Below the navbar */
-        right: 0;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-end;
+@media (max-width: 600px) {
+    #footer-contact {
         display: none;
-        /* Hide initially */
     }
 
-    .nav-links.active {
-        padding: 0;
-        margin: 0;
-        background-color: #ffffff;
-        width: 25%;
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 280px;
-
-        /* Slide down */
+    #footer button {
+        width: 100%;
     }
 
-    .hamburger {
-        display: block;
-        /* Show hamburger on mobile */
+    .footer-section-1 {
+        width: 60vw;
+        padding-right: 20px;
     }
+}
 
-    .navbar {
-        padding: 10px 5%;
-        font-size: 1rem;
-    }
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+/* Make visible when scrolled into view */
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @media (max-width: 850px) {
@@ -479,17 +467,21 @@ canvas {
         /* Show hamburger on mobile */
     }
 
-    .navbar {
-        padding: 10px 5%;
-        font-size: 1rem;
+    .logo img {
+        min-width: 100px;
+    }
+
+    .half-circle {
+        margin-top: -20%;
+        text-align: center;
     }
 }
 
 /* Extra Small Devices (Mobile Phones) */
 @media (max-width: 480px) {
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
         padding: 10px;
     }
 
@@ -509,31 +501,4 @@ canvas {
         text-align: center;
         font-size: 0.9rem;
     }
-}
-
-@media (max-width: 600px) {
-    #footer-contact {
-        display: none;
-    }
-
-    #footer button {
-        width: 100%;
-    }
-
-    .footer-section-1 {
-        width: 60vw;
-        padding-right: 20px;
-    }
-}
-
-.scroll-reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s, transform 0.6s;
-}
-
-/* Make visible when scrolled into view */
-.scroll-reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
 }

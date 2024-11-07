@@ -1,6 +1,29 @@
+@media (min-width: 320px) {
+    #pricing {
+        padding: 50px 0px;
+    }
+
+    #lump-sum,
+    #monthly-plan {
+        width: 100%;
+    }
+
+    #pricing h2 {
+        font-size: 2.2rem;
+    }
+
+    .features li {
+        font-size: 1.1rem;
+    }
+
+    .price {
+        font-size: 1.4rem;
+    }
+}
+
 @media (min-width: 480px) {
     #pricing {
-        padding: 40px 1%;
+        padding: 40px 0px;
     }
 
     #lump-sum,
@@ -24,7 +47,7 @@
 /* For screens with width of 768px and above */
 @media (min-width: 768px) {
     #pricing {
-        padding: 50px 30px;
+        padding: 50px 0px;
     }
 
     #pricing h2 {
@@ -63,7 +86,7 @@
     #lump-sum,
     #monthly-plan {
         width: 45%;
-        margin: 20px;
+        margin: 20px auto;
     }
 
     .features li {
@@ -140,11 +163,13 @@
         text-align: center;
         display: flex;
         justify-content: center;
+        padding-bottom: 20px;
     }
 
     #main p {
         margin: 0px 10px 5px 10px;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+        padding-bottom: 50px;
     }
 }
 
@@ -240,6 +265,10 @@
     #why-text ul {
         font-size: 1rem;
     }
+
+    #why-img {
+        scale: 0.9;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -264,9 +293,7 @@
     .reason p {
         font-size: 0.9rem;
     }
-}
 
-@media (max-width: 850px) {
     #reasons {
         display: flex;
         flex-direction: column;
@@ -286,75 +313,6 @@
 
     .reason p {
         font-size: 0.85rem;
-    }
-}
-
-@media (max-width: 850px) {
-    .navbar.active {
-        z-index: 1;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 70px;
-        /* Below the navbar */
-        right: 0;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-end;
-        display: none;
-        /* Hide initially */
-    }
-
-    .nav-links.active {
-        padding: 0;
-        margin-top: 1%;
-        background-color: #ffffff;
-        width: 25%;
-        border-radius: 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 280px;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-        z-index: -1;
-        /* Slide down */
-    }
-
-    .hamburger {
-        display: block;
-        /* Show hamburger on mobile */
-    }
-
-    .navbar {
-        padding: 10px 5%;
-        font-size: 1rem;
-    }
-}
-
-/* Extra Small Devices (Mobile Phones) */
-@media (max-width: 480px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
-
-    .navbar-container {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .nav-links {
-        width: 100%;
-        background-color: #022b3a;
-    }
-
-    .nav-links a {
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-        font-size: 0.9rem;
     }
 }
 

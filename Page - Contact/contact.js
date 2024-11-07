@@ -1,5 +1,3 @@
-emailjs.init("YOUR_USER_ID");
-
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.getElementById("navbar");
     const hamburger = document.getElementById("hamburger");

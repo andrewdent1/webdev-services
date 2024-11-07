@@ -8,6 +8,7 @@ body {
     font-family: 'DM Sans', sans-serif;
     scroll-behavior: smooth;
     color: #022b3a;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -112,6 +113,79 @@ body {
     background-color: #022b3a;
     color: white;
     border: 1px solid white;
+}
+
+@media (max-width: 850px) {
+    .navbar.active {
+        z-index: 1;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        /* Below the navbar */
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        display: none;
+        /* Hide initially */
+    }
+
+    .nav-links.active {
+        padding: 0;
+        margin-top: 1%;
+        background-color: #ffffff;
+        width: 25%;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 280px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+        z-index: -1;
+        /* Slide down */
+    }
+
+    .hamburger {
+        display: block;
+        /* Show hamburger on mobile */
+    }
+
+    .logo img {
+        min-width: 100px;
+    }
+
+    .half-circle {
+        margin-top: -20%;
+        text-align: center;
+    }
+}
+
+/* Extra Small Devices (Mobile Phones) */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        width: 100%;
+        background-color: #022b3a;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        font-size: 0.9rem;
+    }
 }
 
 .half-circle {
@@ -221,7 +295,7 @@ canvas {
     z-index: 0;
     background: linear-gradient(to top, #001f3f, #ffffff);
     color: #001f3f;
-    padding: 25px 50px 100px 50px;
+    padding: 25px 20px 100px 20px;
     gap: 10px;
 }
 
@@ -369,7 +443,9 @@ canvas {
 }
 
 #pricing {
-    padding: 100px;
+    padding: 100px 50px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 #pricing h2 {
@@ -458,6 +534,28 @@ canvas {
     color: #777;
 }
 
+.pricing-button {
+    width: 70%;
+    padding: 10px 15px;
+    margin: 25px auto;
+    background-color: white;
+    color: #022b3a;
+    border-radius: 10px;
+    border: 1px solid #022b3a;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-button:hover {
+    background-color: #001f3f;
+    color: white;
+    transform: scale(1.05);
+    transition: transform 0.5s, color 0.5s, background-color 0.5s;
+    border: 1px solid white;
+}
+
 #footer-button {
     padding: 10px 20px;
     font-size: 1rem;
@@ -477,45 +575,6 @@ canvas {
     color: white;
     transform: scale(1.05);
     transition: transform 0.5s, color 0.5s, background-color 0.5s;
-}
-
-@media (max-width: 850px) {
-    .nav-links {
-        position: absolute;
-        top: 70px;
-        /* Below the navbar */
-        right: 0;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-end;
-        display: none;
-        /* Hide initially */
-    }
-
-    .nav-links.active {
-        padding: 0;
-        margin: 0;
-        background-color: #ffffff;
-        width: 25%;
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 280px;
-
-        /* Slide down */
-    }
-
-    .hamburger {
-        display: block;
-        /* Show hamburger on mobile */
-    }
-
-    .navbar {
-        padding: 10px 5%;
-        font-size: 1rem;
-    }
 }
 
 .contact-button {

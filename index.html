@@ -224,7 +224,11 @@
         </footer>
 
     </div>
-    <script src="/Page - Home/script.js"></script>
+    <script src="/Page - Home/script.js">
+        if (window.location.pathname === "/") {
+            window.location.href = "/home";
+        }
+    </script>
 </body>
 
 </html>

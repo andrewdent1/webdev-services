@@ -138,3 +138,47 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initial check for elements already in view
     revealOnScroll();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    emailjs.init("2OSody2sm68KR6Mk1"); // Initialize EmailJS with your public key
+
+    document.getElementById('appointment-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const submitButton = document.getElementById('submit-button');
+        const loading = document.getElementById('loading');
+
+        // Show loading and disable the button
+        submitButton.disabled = true;
+        loading.style.display = 'block';
+
+        // Collect form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+
+        // Send form data using EmailJS
+        emailjs.send("service_ghobf6t", "template_8qollrf", {
+            from_name: name,
+            from_email: email,
+            from_phone: phone,
+            message: message
+        })
+        .then(response => {
+            alert("Message sent successfully!");
+            // Clear the form
+            document.getElementById('appointment-form').reset();
+        })
+        .catch(error => {
+            alert("Failed to send message. Please try again.");
+            console.error("EmailJS error:", error);
+        })
+        .finally(() => {
+            // Hide loading and enable the button
+            submitButton.disabled = false;
+            loading.style.display = 'none';
+        });
+    });
+});
+

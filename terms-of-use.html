@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Terms of Use | Space Coast Web Development</title>
+        <link rel="icon" type="image/png" href="/Logos/SCWD Icon - Color.png">    <link rel="stylesheet" href="services.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+            rel="stylesheet">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    scroll-behavior: smooth;
+    color: #022b3a;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background-color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: top 1s, margin 1s, width 1s, padding 1s, border-radius 1s, box-shadow 1s;
+    z-index: 1000;
+    border-radius: 20px;
+    color: black;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    min-height: 10vh;
+}
+
+.logo img {
+    width: 15vw;
+    min-height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar.scrolled {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    top: 0;
+    border-radius: 0px;
+    width: 100%;
+    padding: 15px 10%;
+}
+
+.hamburger {
+    font-size: 28px;
+    display: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    transition: transform 0.3s ease;
+    color: black;
+    justify-content: center;
+    /* Center the items in the nav-links container */
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 14px 15px;
+    transition: transform 0.1s;
+    color: black;
+    position: relative;
+}
+
+.nav-links a:hover {
+    transform: scale(1.1);
+    background-color: #022b3a;
+    color: white;
+    border-radius: 5px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #022b3a;
+    color: white;
+    border: 1px solid white;
+}
+
+@media (max-width: 850px) {
+    .navbar.active {
+        z-index: 1;
+    }
+
+    .half-circle-text {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        /* Below the navbar */
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        display: none;
+        /* Hide initially */
+    }
+
+    .nav-links.active {
+        padding: 0;
+        margin-top: 1%;
+        background-color: #ffffff;
+        width: 25%;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 280px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+        z-index: -1;
+        /* Slide down */
+    }
+
+    .hamburger {
+        display: block;
+        /* Show hamburger on mobile */
+    }
+
+    .logo img {
+        min-width: 100px;
+    }
+
+    .half-circle {
+        margin-top: -20%;
+        text-align: center;
+    }
+}
+
+/* Extra Small Devices (Mobile Phones) */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        width: 100%;
+        background-color: #022b3a;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+}
+
+.half-circle {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60vh;
+    width: 100vw;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Starfield Canvas */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    z-index: 1;
+    /* Place canvas behind content */
+}
+
+/* Text in Half-Circle */
+.half-circle-text {
+    color: white;
+    background-color: #000;
+    font-size: 3.5rem;
+    padding: 100px 20px 20px 20px;
+    margin: 0;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    /* Ensure it's above the canvas */
+}
+
+        h1, h2, h3, h4 {
+            color: #022b3a;
+        }
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 15px;
+        }
+        p, ul {
+            margin: 10px 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .last-updated {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+    background-color: #022b3a;
+    color: #ffffff;
+    padding: 100px 0 50px 0;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.footer-section-1 {
+    width: 30vw;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 200px;
+    height: auto;
+}
+
+.footer-tagline {
+    margin: 20px 0 0 0;
+    font-size: 16px;
+    color: #cccccc;
+}
+
+#footer-button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #0f2a44;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.more-links {
+    margin-left: -125px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #ffffff;
+}
+
+.footer-bottom p {
+    color: #cccccc;
+}
+
+.footer-bottom ul {
+    display: flex;
+    list-style: none;
+}
+
+.footer-bottom ul li {
+    margin-left: 20px;
+}
+
+.footer-bottom ul li a {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.footer-item-img {
+    width: 25px;
+    padding-right: 10px;
+}
+
+.color-icon {
+    scale: 10;
+}
+
+#content {
+    padding: 10%;
+}
+
+
+@media (max-width: 600px) {
+    #footer-contact {
+        display: none;
+    }
+    
+    #footer-button {
+        width: 100%;
+    }
+
+    .footer-section-1 {
+        width: 60vw;
+        padding-right: 20px;
+    }
+}
+    </style>
+</head>
+    
+    <body>
+        <div class="navbar" id="navbar">
+            <div class="logo"><img src="/Logos/SCWD Logo - Color.png" alt=""></div>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <div class="nav-links" id="nav-links">
+                <a href="/index.html" class="dropdown-item">Home</a>
+                <a href="/Page - About/about.html">About Us</a>
+                <a href="/Page - FAQ/faq.html">FAQ</a>
+                <a href="/Page - Services/services.html" class="dropdown-item">Services</a>
+                <a href="/Page - Contact/contact.html" class="dropdown-item">Contact</a>
+            </div>
+        </div>
+    
+        <div class="half-circle">
+            <canvas id="starfield"></canvas>
+            <h1 class="half-circle-text">Terms of Use</h1>
+        </div>
+
+<section id="content">
+
+    <p class="last-updated">Last updated November 1, 2024</p>
+
+    <h2>AGREEMENT TO OUR LEGAL TERMS</h2>
+    <p>We are Space Coast Web Development ("Company," "we," "us," "our"), a company registered in Washington, United States.</p>
+    <p>These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you"), and Space Coast Web Development, concerning your access to and use of our services. By accessing our services, you agree to be bound by all of these Legal Terms. If you do not agree with all of these Legal Terms, then you are expressly prohibited from using the services.</p>
+
+    <h2>1. OUR SERVICES</h2>
+    <p>The information provided when using the Services is not intended for distribution to or use by any person or entity in any jurisdiction or country where such distribution or use would be contrary to law or regulation or which would subject us to any registration requirement within such jurisdiction or country. Accordingly, those persons who choose to access the Services from other locations do so on their own initiative and are solely responsible for compliance with local laws, if and to the extent local laws are applicable. The Services are not tailored to comply with industry-specific regulations (Health Insurance Portability and Accountability Act (HIPAA), Federal Information Security Management Act (FISMA), etc.), so if your interactions would be subjected to such laws, you may not use the Services. You may not use the Services in a way that would violate the Gramm-Leach-Bliley Act (GLBA).</p>
+
+    <h2>2. INTELLECTUAL PROPERTY RIGHTS</h2>
+    <p>We are the owner or the licensee of all intellectual property rights in our Services, including all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics in the Services (collectively, the "Content"), as well as the trademarks, service marks, and logos contained therein (the "Marks"). Our Content and Marks are protected by copyright and trademark laws (and various other intellectual property rights and unfair competition laws) and treaties in the United States and around the world. The Content and Marks are provided in or through the Services "AS IS" for your personal, non-commercial use or internal business purpose only.</p>
+
+    <h2>3. USER REPRESENTATIONS</h2>
+    <p>By using the Services, you represent and warrant that: (1) you have the legal capacity and you agree to comply with these Legal Terms; (2) you are not a minor in the jurisdiction in which you reside; (3) you will not access the Services through automated or non-human means, whether through a bot, script or otherwise; (4) you will not use the Services for any illegal or unauthorized purpose; and (5) your use of the Services will not violate any applicable law or regulation. If you provide any information that is untrue, inaccurate, not current, or incomplete, we have the right to suspend or terminate your account and refuse any and all current or future use of the Services (or any portion thereof).</p>
+    
+    <h2>4. PROHIBITED ACTIVITIES</h2>
+    <p>You may not access or use the Services for any purpose other than that for which we make the Services available. The Services may not be used in connection with any commercial endeavors except those that are specifically endorsed or approved by us.</p>
+    <p>As a user of the Services, you agree not to:</p>
+    <ul>
+        <li>Systematically retrieve data or other content from the Services to create or compile, directly or indirectly, a collection, compilation, database, or directory without written permission from us.</li>
+        <li>Trick, defraud, or mislead us and other users, especially in any attempt to learn sensitive account information such as user passwords.</li>
+        <li>Circumvent, disable, or otherwise interfere with security-related features of the Services, including features that prevent or restrict the use or copying of any Content or enforce limitations on the use of the Services and/or the Content contained therein.</li>
+        <li>Disparage, tarnish, or otherwise harm, in our opinion, us and/or the Services.</li>
+        <li>Use any information obtained from the Services in order to harass, abuse, or harm another person.</li>
+        <li>Make improper use of our support services or submit false reports of abuse or misconduct.</li>
+        <li>Use the Services in a manner inconsistent with any applicable laws or regulations.</li>
+        <li>Engage in unauthorized framing of or linking to the Services.</li>
+        <li>Upload or transmit (or attempt to upload or to transmit) viruses, Trojan horses, or other material, including excessive use of capital letters and spamming (continuous posting of repetitive text), that interferes with any party’s uninterrupted use and enjoyment of the Services or modifies, impairs, disrupts, alters, or interferes with the use, features, functions, operation, or maintenance of the Services.</li>
+        <li>Engage in any automated use of the system, such as using scripts to send comments or messages, or using any data mining, robots, or similar data gathering and extraction tools.</li>
+        <li>Delete the copyright or other proprietary rights notice from any Content.</li>
+        <li>Attempt to impersonate another user or person or use the username of another user.</li>
+        <li>Upload or transmit (or attempt to upload or to transmit) any material that acts as a passive or active information collection or transmission mechanism, including without limitation, clear graphics interchange formats ("gifs"), 1×1 pixels, web bugs, cookies, or other similar devices (sometimes referred to as "spyware" or "passive collection mechanisms" or "pcms").</li>
+        <li>Interfere with, disrupt, or create an undue burden on the Services or the networks or services connected to the Services.</li>
+        <li>Harass, annoy, intimidate, or threaten any of our employees or agents engaged in providing any portion of the Services to you.</li>
+        <li>Attempt to bypass any measures of the Services designed to prevent or restrict access to the Services, or any portion of the Services.</li>
+        <li>Copy or adapt the Services' software, including but not limited to Flash, PHP, HTML, JavaScript, or other code.</li>
+        <li>Except as permitted by applicable law, decipher, decompile, disassemble, or reverse engineer any of the software comprising or in any way making up a part of the Services.</li>
+        <li>Except as may be the result of standard search engine or Internet browser usage, use, launch, develop, or distribute any automated system, including without limitation, any spider, robot, cheat utility, scraper, or offline reader that accesses the Services, or use or launch any unauthorized script or other software.</li>
+        <li>Use a buying agent or purchasing agent to make purchases on the Services.</li>
+        <li>Make any unauthorized use of the Services, including collecting usernames and/or email addresses of users by electronic or other means for the purpose of sending unsolicited email, or creating user accounts by automated means or under false pretenses.</li>
+        <li>Use the Services as part of any effort to compete with us or otherwise use the Services and/or the Content for any revenue-generating endeavor or commercial enterprise.</li>
+        <li>Use the Services to advertise or offer to sell goods and services.</li>
+        <li>Sell or otherwise transfer your profile.</li>
+    </ul>
+
+    <h2>5. USER GENERATED CONTRIBUTIONS</h2>
+    <p>The Services does not offer users the ability to submit or post content.</p>
+
+    <h2>6. CONTRIBUTION LICENSE</h2>
+    <p>You and Services agree that we may access, store, process, and use any information and personal data that you provide following the terms of the Privacy Policy and your choices (including settings). By submitting suggestions or other feedback regarding the Services, you agree that we can use and share such feedback for any purpose without compensation to you.</p>
+
+    <h2>7. THIRD-PARTY WEBSITES AND CONTENT</h2>
+    <p>The Services may contain (or you may be sent via the Site) links to other websites ("Third-Party Websites") as well as articles, photographs, text, graphics, pictures, designs, music, sound, video, information, applications, software, and other content or items belonging to or originating from third parties ("Third-Party Content"). Such Third-Party Websites and Third-Party Content are not investigated, monitored, or checked for accuracy, appropriateness, or completeness by us, and we are not responsible for any Third-Party Websites accessed through the Services or any Third-Party Content posted on, available through, or installed from the Services, including the content, accuracy, offensiveness, opinions, reliability, privacy practices, or other policies of or contained in the Third-Party Websites or the Third-Party Content. Inclusion of, linking to, or permitting the use or installation of any Third-Party Websites or any Third-Party Content does not imply approval or endorsement thereof by us. If you decide to leave the Services and access the Third-Party Websites or to use or install any Third-Party Content, you do so at your own risk, and you should be aware these Legal Terms no longer govern. You should review the applicable terms and policies, including privacy and data gathering practices, of any website to which you navigate from the Services or relating to any applications you use or install from the Services. Any purchases you make through Third-Party Websites will be through other websites and from other companies, and we take no responsibility whatsoever in relation to such purchases which are exclusively between you and the applicable third party. You agree and acknowledge that we do not endorse the products or services offered on Third-Party Websites and you shall hold us blameless from any harm caused by your purchase of such products or services. Additionally, you shall hold us blameless from any losses sustained by you or harm caused to you relating to or resulting in any way from any Third-Party Content or any contact with Third-Party Websites.</p>
+
+    <h2>8. SERVICES MANAGEMENT</h2>
+    <p>We reserve the right, but not the obligation, to: (1) monitor the Services for violations of these Legal Terms; (2) take appropriate legal action against anyone who, in our sole discretion, violates the law or these Legal Terms, including without limitation, reporting such user to law enforcement authorities; (3) in our sole discretion and without limitation, refuse, restrict access to, limit the availability of, or disable (to the extent technologically feasible) any of your Contributions or any portion thereof; (4) in our sole discretion and without limitation, notice, or liability, to remove from the Services or otherwise disable all files and content that are excessive in size or are in any way burdensome to our systems; and (5) otherwise manage the Services in a manner designed to protect our rights and property and to facilitate the proper functioning of the Services.</p>
+
+    <h2>9. PRIVACY POLICY</h2>
+    <p>By using the Services, you agree to be bound by our Privacy Policy, which is incorporated into these Legal Terms. Please be advised the Services are hosted in the United States. If you access the Services from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in the United States, then through your continued use of the Services, you are transferring your data to the United States, and you expressly consent to have your data transferred to and processed in the United States.</p>
+
+    <h2>10. TERM AND TERMINATION</h2>
+    <p>These Legal Terms shall remain in full force and effect while you use the Services. WITHOUT LIMITING ANY OTHER PROVISION OF THESE LEGAL TERMS, WE RESERVE THE RIGHT TO, IN OUR SOLE DISCRETION AND WITHOUT NOTICE OR LIABILITY, DENY ACCESS TO AND USE OF THE SERVICES (INCLUDING BLOCKING CERTAIN IP ADDRESSES), TO ANY PERSON FOR ANY REASON OR FOR NO REASON, INCLUDING WITHOUT LIMITATION FOR BREACH OF ANY REPRESENTATION, WARRANTY, OR COVENANT CONTAINED IN THESE LEGAL TERMS OR OF ANY APPLICABLE LAW OR REGULATION. WE MAY TERMINATE YOUR USE OR PARTICIPATION IN THE SERVICES OR DELETE ANY CONTENT OR INFORMATION THAT YOU POSTED AT ANY TIME, WITHOUT WARNING, IN OUR SOLE DISCRETION. If we terminate or suspend your account for any reason, you are prohibited from registering and creating a new account under your name, a fake or borrowed name, or the name of any third party, even if you may be acting on behalf of the third party. In addition to terminating or suspending your account, we reserve the right to take appropriate legal action, including without limitation pursuing civil, criminal, and injunctive redress.</p>
+
+    <h2>11. MODIFICATIONS AND INTERRUPTIONS</h2>
+    <p>We reserve the right to change, modify, or remove the contents of the Services at any time or for any reason at our sole discretion without notice. However, we have no obligation to update any information on our Services. We will not be liable to you or any third party for any modification, price change, suspension, or discontinuance of the Services. We cannot guarantee the Services will be available at all times. We may experience hardware, software, or other problems or need to perform maintenance related to the Services, resulting in interruptions, delays, or errors. We reserve the right to change, revise, update, suspend, discontinue, or otherwise modify the Services at any time or for any reason without notice to you. You agree that we have no liability whatsoever for any loss, damage, or inconvenience caused by your inability to access or use the Services during any downtime or discontinuance of the Services. Nothing in these Legal Terms will be construed to obligate us to maintain and support the Services or to supply any corrections, updates, or releases in connection there with.</p>
+
+    <h2>12. GOVERNING LAW</h2>
+    <p>These Legal Terms and your use of the Services are governed by and construed in accordance with the laws of the State of Washington applicable to agreements made and to be entirely performed within the State of Washington, without regard to its conflict of law principles.</p>
+
+    <h2>13. DISPUTE RESOLUTION</h2>
+    <P>Any legal action of whatever nature brought by either you or us (collectively, the "Parties" and individually, a "Party") shall be commenced or prosecuted in the state and federal courts located in island, Washington, and the Parties hereby consent to, and waive all defenses of lack of personal jurisdiction and forum non conveniens with respect to venue and jurisdiction in such state and federal courts. Application of the United Nations Convention on Contracts for the International Sale of Goods and the Uniform Computer Information Transaction Act (UCITA) are excluded from these Legal Terms. In no event shall any claim, action, or proceeding brought by either Party related in any way to the Services be commenced more than one (1) years after the cause of action arose.</P>
+
+    <h2>14. CORRECTIONS</h2>
+    <p>There may be information on the Services that contains typographical errors, inaccuracies, or omissions, including descriptions, pricing, availability, and various other information. We reserve the right to correct any errors, inaccuracies, or omissions and to change or update the information on the Services at any time, without prior notice.</p>
+
+    <h2>15. DISCLAIMER</h2>
+    <p>THE SERVICES ARE PROVIDED ON AN AS-IS AND AS-AVAILABLE BASIS. YOU AGREE THAT YOUR USE OF THE SERVICES WILL BE AT YOUR SOLE RISK. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, IN CONNECTION WITH THE SERVICES AND YOUR USE THEREOF, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE MAKE NO WARRANTIES OR REPRESENTATIONS ABOUT THE ACCURACY OR COMPLETENESS OF THE SERVICES' CONTENT OR THE CONTENT OF ANY WEBSITES OR MOBILE APPLICATIONS LINKED TO THE SERVICES AND WE WILL ASSUME NO LIABILITY OR RESPONSIBILITY FOR ANY (1) ERRORS, MISTAKES, OR INACCURACIES OF CONTENT AND MATERIALS, (2) PERSONAL INJURY OR PROPERTY DAMAGE, OF ANY NATURE WHATSOEVER, RESULTING FROM YOUR ACCESS TO AND USE OF THE SERVICES, (3) ANY UNAUTHORIZED ACCESS TO OR USE OF OUR SECURE SERVERS AND/OR ANY AND ALL PERSONAL INFORMATION AND/OR FINANCIAL INFORMATION STORED THEREIN, (4) ANY INTERRUPTION OR CESSATION OF TRANSMISSION TO OR FROM THE SERVICES, (5) ANY BUGS, VIRUSES, TROJAN HORSES, OR THE LIKE WHICH MAY BE TRANSMITTED TO OR THROUGH THE SERVICES BY ANY THIRD PARTY, AND/OR (6) ANY ERRORS OR OMISSIONS IN ANY CONTENT AND MATERIALS OR FOR ANY LOSS OR DAMAGE OF ANY KIND INCURRED AS A RESULT OF THE USE OF ANY CONTENT POSTED, TRANSMITTED, OR OTHERWISE MADE AVAILABLE VIA THE SERVICES. WE DO NOT WARRANT, ENDORSE, GUARANTEE, OR ASSUME RESPONSIBILITY FOR ANY PRODUCT OR SERVICE ADVERTISED OR OFFERED BY A THIRD PARTY THROUGH THE SERVICES, ANY HYPERLINKED WEBSITE, OR ANY WEBSITE OR MOBILE APPLICATION FEATURED IN ANY BANNER OR OTHER ADVERTISING, AND WE WILL NOT BE A PARTY TO OR IN ANY WAY BE RESPONSIBLE FOR MONITORING ANY TRANSACTION BETWEEN YOU AND ANY THIRD-PARTY PROVIDERS OF PRODUCTS OR SERVICES. AS WITH THE PURCHASE OF A PRODUCT OR SERVICE THROUGH ANY MEDIUM OR IN ANY ENVIRONMENT, YOU SHOULD USE YOUR BEST JUDGMENT AND EXERCISE CAUTION WHERE APPROPRIATE.</p>
+
+    <h2>16. LIMITATIONS OF LIABILITY</h2>
+    <p>IN NO EVENT WILL WE OR OUR DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT, INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFIT, LOST REVENUE, LOSS OF DATA, OR OTHER DAMAGES ARISING FROM YOUR USE OF THE SERVICES, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+
+    <h2>17. INDEMNIFICATION</h2>
+    <p>You agree to defend, indemnify, and hold us harmless, including our subsidiaries, affiliates, and all of our respective officers, agents, partners, and employees, from and against any loss, damage, liability, claim, or demand, including reasonable attorneys’ fees and expenses, made by any third party due to or arising out of: (1) use of the Services; (2) breach of these Legal Terms; (3) any breach of your representations and warranties set forth in these Legal Terms; (4) your violation of the rights of a third party, including but not limited to intellectual property rights; or (5) any overt harmful act toward any other user of the Services with whom you connected via the Services. Notwithstanding the foregoing, we reserve the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify us, and you agree to cooperate, at your expense, with our defense of such claims. We will use reasonable efforts to notify you of any such claim, action, or proceeding which is subject to this indemnification upon becoming aware of it.</p>
+
+    <h2>18. USER DATA</h2>
+    <p>We will maintain certain data that you transmit to the Services for the purpose of managing the performance of the Services, as well as data relating to your use of the Services. Although we perform regular routine backups of data, you are solely responsible for all data that you transmit or that relates to any activity you have undertaken using the Services. You agree that we shall have no liability to you for any loss or corruption of any such data, and you hereby waive any right of action against us arising from any such loss or corruption of such data.</p>
+
+    <h2>19. ELECTRONIC COMMUNICATIONS, TRANSACTIONS, AND SIGNATURES</h2>
+    <p>Visiting the Services, sending us emails, and completing online forms constitute electronic communications. You consent to receive electronic communications, and you agree that all agreements, notices, disclosures, and other communications we provide to you electronically, via email and on the Services, satisfy any legal requirement that such communication be in writing. YOU HEREBY AGREE TO THE USE OF ELECTRONIC SIGNATURES, CONTRACTS, ORDERS, AND OTHER RECORDS, AND TO ELECTRONIC DELIVERY OF NOTICES, POLICIES, AND RECORDS OF TRANSACTIONS INITIATED OR COMPLETED BY US OR VIA THE SERVICES. You hereby waive any rights or requirements under any statutes, regulations, rules, ordinances, or other laws in any jurisdiction which require an original signature or delivery or retention of non-electronic records, or to payments or the granting of credits by any means other than electronic means.</p>
+
+    <h2>20. MISCELLANEOUS</h2>
+    <p>These Legal Terms and any policies or operating rules posted by us on the Services or in respect to the Services constitute the entire agreement and understanding between you and us. Our failure to exercise or enforce any right or provision of these Legal Terms shall not operate as a waiver of such right or provision. These Legal Terms operate to the fullest extent permissible by law. We may assign any or all of our rights and obligations to others at any time. We shall not be responsible or liable for any loss, damage, delay, or failure to act caused by any cause beyond our reasonable control. If any provision or part of a provision of these Legal Terms is determined to be unlawful, void, or unenforceable, that provision or part of the provision is deemed severable from these Legal Terms and does not affect the validity and enforceability of any remaining provisions. There is no joint venture, partnership, employment or agency relationship created between you and us as a result of these Legal Terms or use of the Services. You agree that these Legal Terms will not be construed against us by virtue of having drafted them. You hereby waive any and all defenses you may have based on the electronic form of these Legal Terms and the lack of signing by the parties hereto to execute these Legal Terms.</p>
+
+</section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-section-1">
+                    <div class="footer-logo">
+                        <img src="/Logos/SCWD Logo - White.png" alt="Oak Harbor Web Designs Logo">
+                    </div>
+                    <p class="footer-tagline">
+                        We believe small businesses deserve better. Just because you're small, doesn't mean your
+                        site
+                        needs to
+                        be. Let us make you something amazing.
+                    </p>
+                    <a href="#" id="footer-button">Get Started Today</a>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/Page - About/about.html">About Us</a></li>
+                        <li><a href="/Page - FAQ/faq.html">FAQ's</a></li>
+                        <li><a href="/Page - Services/services.html">Services</a></li>
+                        <li><a href="/Page - Contact/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div id="footer-contact">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li><img src="/Images/phone.png" alt="" class="footer-item-img">(407) 701-3739
+                        </li>
+                        <li><img src="/Images/email.png" alt="" class="footer-item-img"><a
+                                href="mailto:dentdrew@gmail.com">dentdrew@gmail.com</a></li>
+                        <li><img src="/Images/location.png" alt="" class="footer-item-img">United States
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© Copyright 2024 Space Coast Web Development</p>
+                <ul>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-use.html">Terms of Use</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.getElementById("navbar");
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+    const sections = document.querySelectorAll("section");
+    const sticky = navbar.offsetTop; // Get the navbar's initial position
+
+    // Highlight active section link
+    function highlightActiveLink() {
+        const fromTop = window.scrollY + navbar.offsetHeight;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const link = document.querySelector(`a[href="#${section.id}"]`);
+
+            if (fromTop >= sectionTop && fromTop < sectionTop + sectionHeight) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active");
+            }
+        });
+    }
+
+    // Navbar behavior on scroll
+    window.onscroll = function () {
+        if (window.pageYOffset > sticky) {
+            navbar.classList.add("scrolled"); // Add class for styling
+            navbar.style.position = "fixed"; // Fix navbar to the top of the viewport
+            navbar.style.top = "0"; // Set top position
+        } else {
+            navbar.classList.remove("scrolled"); // Remove class
+            navbar.style.position = "absolute"; // Return to initial position
+            navbar.style.top = "20px"; // Set to initial top position
+        }
+        highlightActiveLink(); // Update active link highlight
+    };
+
+    // Toggle hamburger menu
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active"); // Toggle active class for slide-down effect
+    });
+
+    // Close mobile menu when a link is clicked
+    navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            if (navLinks.classList.contains("active")) {
+                navLinks.classList.remove("active"); // Close the mobile menu
+            }
+        });
+    });
+
+    // Smooth scrolling to sections
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+});
+
+const canvas = document.getElementById('starfield');
+const context = canvas.getContext('2d');
+const stars = [];
+
+// Resize the canvas to fit the half-circle
+function resizeCanvas() {
+    canvas.width = document.querySelector('.half-circle').offsetWidth;
+    canvas.height = document.querySelector('.half-circle').offsetHeight;
+}
+
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+// Create stars
+function createStars(count) {
+    stars.length = 0; // Clear the existing stars
+    for (let i = 0; i < count; i++) {
+        stars.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            size: Math.random() * 2,
+            speed: Math.random() * 0.5
+        });
+    }
+}
+
+// Update stars' positions
+function updateStars() {
+    stars.forEach(star => {
+        star.x -= star.speed;
+        if (star.x < 0) star.x = canvas.width;
+    });
+}
+
+// Draw stars on the canvas
+function drawStars() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.fillStyle = 'white';
+    stars.forEach(star => {
+        context.beginPath();
+        context.arc(star.x, star.y, star.size, 0, 2 * Math.PI);
+        context.fill();
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    var body = document.body;
+    setInterval(createStar, 100);
+    function createStar() {
+        var right = Math.random() * 500;
+        var top = Math.random() * screen.height;
+        var star = document.createElement("div");
+        star.classList.add("star")
+        body.appendChild(star);
+        setInterval(runStar, 10);
+        star.style.top = top + "px";
+        function runStar() {
+            if (right >= screen.width) {
+                star.remove();
+            }
+            right += 3;
+            star.style.right = right + "px";
+        }
+    }
+})
+
+// Animate the starfield
+function animate() {
+    updateStars();
+    drawStars();
+    requestAnimationFrame(animate);
+}
+
+createStars(200); // Adjust the number of stars as needed
+animate();
+
+document.addEventListener("DOMContentLoaded", function () {
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+
+    function revealOnScroll() {
+        const viewportHeight = window.innerHeight;
+
+        revealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const triggerPoint = 100; // Adjust this value to trigger earlier or later
+
+            if (elementTop < viewportHeight - triggerPoint) {
+                element.classList.add('visible');
+            }
+        });
+    }
+
+    // Listen for scroll events
+    window.addEventListener('scroll', revealOnScroll);
+
+    // Initial check for elements already in view
+    revealOnScroll();
+});
+</script>
+
+</body>
+</html>

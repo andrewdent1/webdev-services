@@ -1,0 +1,727 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Services | Space Coast Web Development</title>
+        <link rel="icon" type="image/png" href="/Logos/SCWD Icon - Color.png">    <link rel="stylesheet" href="services.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+            rel="stylesheet">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    scroll-behavior: smooth;
+    color: #022b3a;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background-color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: top 1s, margin 1s, width 1s, padding 1s, border-radius 1s, box-shadow 1s;
+    z-index: 1000;
+    border-radius: 20px;
+    color: black;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    min-height: 10vh;
+}
+
+.logo img {
+    width: 15vw;
+    min-height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar.scrolled {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    top: 0;
+    border-radius: 0px;
+    width: 100%;
+    padding: 15px 10%;
+}
+
+.hamburger {
+    font-size: 28px;
+    display: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    transition: transform 0.3s ease;
+    color: black;
+    justify-content: center;
+    /* Center the items in the nav-links container */
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 14px 15px;
+    transition: transform 0.1s;
+    color: black;
+    position: relative;
+}
+
+.nav-links a:hover {
+    transform: scale(1.1);
+    background-color: #022b3a;
+    color: white;
+    border-radius: 5px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #022b3a;
+    color: white;
+    border: 1px solid white;
+}
+
+@media (max-width: 850px) {
+    .navbar.active {
+        z-index: 1;
+    }
+
+    .half-circle-text {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        /* Below the navbar */
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        display: none;
+        /* Hide initially */
+    }
+
+    .nav-links.active {
+        padding: 0;
+        margin-top: 1%;
+        background-color: #ffffff;
+        width: 25%;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 280px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+        z-index: -1;
+        /* Slide down */
+    }
+
+    .hamburger {
+        display: block;
+        /* Show hamburger on mobile */
+    }
+
+    .logo img {
+        min-width: 100px;
+    }
+
+    .half-circle {
+        margin-top: -20%;
+        text-align: center;
+    }
+}
+
+/* Extra Small Devices (Mobile Phones) */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        width: 100%;
+        background-color: #022b3a;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+}
+
+.half-circle {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60vh;
+    width: 100vw;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Starfield Canvas */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    z-index: 1;
+    /* Place canvas behind content */
+}
+
+/* Text in Half-Circle */
+.half-circle-text {
+    color: white;
+    background-color: #000;
+    font-size: 3.5rem;
+    padding: 100px 20px 20px 20px;
+    margin: 0;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    /* Ensure it's above the canvas */
+}
+
+        h1, h2, h3, h4 {
+            color: #022b3a;
+        }
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 15px;
+        }
+        p, ul {
+            margin: 10px 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .last-updated {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+    background-color: #022b3a;
+    color: #ffffff;
+    padding: 100px 0 50px 0;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.footer-section-1 {
+    width: 30vw;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 200px;
+    height: auto;
+}
+
+.footer-tagline {
+    margin: 20px 0 0 0;
+    font-size: 16px;
+    color: #cccccc;
+}
+
+#footer-button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #0f2a44;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.more-links {
+    margin-left: -125px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #ffffff;
+}
+
+.footer-bottom p {
+    color: #cccccc;
+}
+
+.footer-bottom ul {
+    display: flex;
+    list-style: none;
+}
+
+.footer-bottom ul li {
+    margin-left: 20px;
+}
+
+.footer-bottom ul li a {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.footer-item-img {
+    width: 25px;
+    padding-right: 10px;
+}
+
+.color-icon {
+    scale: 10;
+}
+
+#content {
+    padding: 10%;
+}
+
+
+@media (max-width: 600px) {
+    #footer-contact {
+        display: none;
+    }
+    
+    #footer-button {
+        width: 100%;
+    }
+
+    .footer-section-1 {
+        width: 60vw;
+        padding-right: 20px;
+    }
+}
+    </style>
+</head>
+    
+    <body>
+        <div class="navbar" id="navbar">
+            <div class="logo"><img src="/Logos/SCWD Logo - Color.png" alt=""></div>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <div class="nav-links" id="nav-links">
+                <a href="/index.html" class="dropdown-item">Home</a>
+                <a href="/Page - About/about.html">About Us</a>
+                <a href="/Page - FAQ/faq.html">FAQ</a>
+                <a href="/Page - Services/services.html" class="dropdown-item">Services</a>
+                <a href="/Page - Contact/contact.html" class="dropdown-item">Contact</a>
+            </div>
+        </div>
+    
+        <div class="half-circle">
+            <canvas id="starfield"></canvas>
+            <h1 class="half-circle-text">Privacy Policy</h1>
+        </div>
+
+<section id="content">
+    <p class="last-updated">Last updated: November 1st, 2024</p>
+
+    <p>This Privacy Policy describes Our policies and procedures on the collection, use, and disclosure of Your information when You use the Service, and tells You about Your privacy rights and how the law protects You.</p>
+    <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
+
+    <h2>Interpretation and Definitions</h2>
+
+    <h3>Interpretation</h3>
+    <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+
+    <h3>Definitions</h3>
+    <p>For the purposes of this Privacy Policy:</p>
+    <ul>
+        <li><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</li>
+        <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Space Coast Web Development.</li>
+        <li><strong>Cookies</strong> are small files placed on Your computer or mobile device by a website, containing details of Your browsing history on that website among its many uses.</li>
+        <li><strong>Device</strong> means any device that can access the Service, such as a computer, a cellphone, or a digital tablet.</li>
+        <li><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</li>
+        <li><strong>Service</strong> refers to the Website.</li>
+        <li><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service.</li>
+        <li><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself.</li>
+        <li><strong>Website</strong> refers to Space Coast Web Development, accessible from https://spacecoastwebdev.com/</li>
+        <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service.</li>
+    </ul>
+
+    <h2>Collecting and Using Your Personal Data</h2>
+    <h3>Types of Data Collected</h3>
+
+    <h4>Personal Data</h4>
+    <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
+    <ul>
+        <li>Email address</li>
+        <li>First name and last name</li>
+        <li>Phone number</li>
+        <li>Address, State, Province, ZIP/Postal code, City</li>
+    </ul>
+
+    <h4>Usage Data</h4>
+    <p>Usage Data is collected automatically when using the Service. This may include information such as Your Device's IP address, browser type, browser version, pages of our Service that You visit, time and date of Your visit, and other diagnostic data.</p>
+
+    <h3>Tracking Technologies and Cookies</h3>
+    <p>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information.</p>
+    <ul>
+        <li><strong>Cookies or Browser Cookies.</strong> You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service.</li>
+        <li><strong>Web Beacons.</strong> Certain sections of our Service and emails may contain electronic files known as web beacons that permit the Company, for example, to count users who have visited pages or opened an email.</li>
+    </ul>
+
+    <h2>Use of Your Personal Data</h2>
+    <p>The Company may use Personal Data for the following purposes:</p>
+    <ul>
+        <li>To provide and maintain our Service</li>
+        <li>To manage Your Account</li>
+        <li>To contact You</li>
+        <li>To manage Your requests</li>
+        <li>For business transfers</li>
+    </ul>
+
+    <h2>Retention of Your Personal Data</h2>
+    <p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy.</p>
+
+    <h2>Transfer of Your Personal Data</h2>
+    <p>Your information may be transferred to computers located outside of Your state, province, country, or other governmental jurisdiction.</p>
+
+    <h2>Delete Your Personal Data</h2>
+    <p>You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.</p>
+
+    <h2>Disclosure of Your Personal Data</h2>
+    <h3>Business Transactions</h3>
+    <p>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred.</p>
+
+    <h3>Law enforcement</h3>
+    <p>Under certain circumstances, the Company may be required to disclose Your Personal Data if required by law.</p>
+
+    <h2>Security of Your Personal Data</h2>
+    <p>We strive to use commercially acceptable means to protect Your Personal Data but cannot guarantee its absolute security.</p>
+
+    <h2>Changes to this Privacy Policy</h2>
+    <p>We may update Our Privacy Policy from time to time. You are advised to review this Privacy Policy periodically for any changes.</p>
+</section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-section-1">
+                    <div class="footer-logo">
+                        <img src="/Logos/SCWD Logo - White.png" alt="Oak Harbor Web Designs Logo">
+                    </div>
+                    <p class="footer-tagline">
+                        We believe small businesses deserve better. Just because you're small, doesn't mean your
+                        site
+                        needs to
+                        be. Let us make you something amazing.
+                    </p>
+                    <a href="#" id="footer-button">Get Started Today</a>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/Page - About/about.html">About Us</a></li>
+                        <li><a href="/Page - FAQ/faq.html">FAQ's</a></li>
+                        <li><a href="/Page - Services/services.html">Services</a></li>
+                        <li><a href="/Page - Contact/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div id="footer-contact">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li><img src="/Images/phone.png" alt="" class="footer-item-img">(407) 701-3739
+                        </li>
+                        <li><img src="/Images/email.png" alt="" class="footer-item-img"><a
+                                href="mailto:dentdrew@gmail.com">dentdrew@gmail.com</a></li>
+                        <li><img src="/Images/location.png" alt="" class="footer-item-img">United States
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© Copyright 2024 Space Coast Web Development</p>
+                <ul>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/terms-of-use.html">Terms of Use</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.getElementById("navbar");
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+    const sections = document.querySelectorAll("section");
+    const sticky = navbar.offsetTop; // Get the navbar's initial position
+
+    // Highlight active section link
+    function highlightActiveLink() {
+        const fromTop = window.scrollY + navbar.offsetHeight;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const link = document.querySelector(`a[href="#${section.id}"]`);
+
+            if (fromTop >= sectionTop && fromTop < sectionTop + sectionHeight) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active");
+            }
+        });
+    }
+
+    // Navbar behavior on scroll
+    window.onscroll = function () {
+        if (window.pageYOffset > sticky) {
+            navbar.classList.add("scrolled"); // Add class for styling
+            navbar.style.position = "fixed"; // Fix navbar to the top of the viewport
+            navbar.style.top = "0"; // Set top position
+        } else {
+            navbar.classList.remove("scrolled"); // Remove class
+            navbar.style.position = "absolute"; // Return to initial position
+            navbar.style.top = "20px"; // Set to initial top position
+        }
+        highlightActiveLink(); // Update active link highlight
+    };
+
+    // Toggle hamburger menu
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active"); // Toggle active class for slide-down effect
+    });
+
+    // Close mobile menu when a link is clicked
+    navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            if (navLinks.classList.contains("active")) {
+                navLinks.classList.remove("active"); // Close the mobile menu
+            }
+        });
+    });
+
+    // Smooth scrolling to sections
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+});
+
+const canvas = document.getElementById('starfield');
+const context = canvas.getContext('2d');
+const stars = [];
+
+// Resize the canvas to fit the half-circle
+function resizeCanvas() {
+    canvas.width = document.querySelector('.half-circle').offsetWidth;
+    canvas.height = document.querySelector('.half-circle').offsetHeight;
+}
+
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+// Create stars
+function createStars(count) {
+    stars.length = 0; // Clear the existing stars
+    for (let i = 0; i < count; i++) {
+        stars.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            size: Math.random() * 2,
+            speed: Math.random() * 0.5
+        });
+    }
+}
+
+// Update stars' positions
+function updateStars() {
+    stars.forEach(star => {
+        star.x -= star.speed;
+        if (star.x < 0) star.x = canvas.width;
+    });
+}
+
+// Draw stars on the canvas
+function drawStars() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.fillStyle = 'white';
+    stars.forEach(star => {
+        context.beginPath();
+        context.arc(star.x, star.y, star.size, 0, 2 * Math.PI);
+        context.fill();
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    var body = document.body;
+    setInterval(createStar, 100);
+    function createStar() {
+        var right = Math.random() * 500;
+        var top = Math.random() * screen.height;
+        var star = document.createElement("div");
+        star.classList.add("star")
+        body.appendChild(star);
+        setInterval(runStar, 10);
+        star.style.top = top + "px";
+        function runStar() {
+            if (right >= screen.width) {
+                star.remove();
+            }
+            right += 3;
+            star.style.right = right + "px";
+        }
+    }
+})
+
+// Animate the starfield
+function animate() {
+    updateStars();
+    drawStars();
+    requestAnimationFrame(animate);
+}
+
+createStars(200); // Adjust the number of stars as needed
+animate();
+
+document.addEventListener("DOMContentLoaded", function () {
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+
+    function revealOnScroll() {
+        const viewportHeight = window.innerHeight;
+
+        revealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const triggerPoint = 100; // Adjust this value to trigger earlier or later
+
+            if (elementTop < viewportHeight - triggerPoint) {
+                element.classList.add('visible');
+            }
+        });
+    }
+
+    // Listen for scroll events
+    window.addEventListener('scroll', revealOnScroll);
+
+    // Initial check for elements already in view
+    revealOnScroll();
+});
+</script>
+
+</body>
+</html>

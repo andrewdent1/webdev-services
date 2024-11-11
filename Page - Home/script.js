@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         revealElements.forEach(element => {
             const elementTop = element.getBoundingClientRect().top;
-            const triggerPoint = 100; // Adjust this value to trigger earlier or later
+            const triggerPoint = 75; // Adjust this value to trigger earlier or later
 
             if (elementTop < viewportHeight - triggerPoint) {
                 element.classList.add('visible');

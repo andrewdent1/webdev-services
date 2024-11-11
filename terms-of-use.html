@@ -573,6 +573,12 @@ canvas {
     </footer>
 
 <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        if (window.location.pathname === "terms-of-use.html") {
+            history.replaceState({}, "", "/terms-of-use");
+        }
+    });
+
     document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.getElementById("navbar");
     const hamburger = document.getElementById("hamburger");

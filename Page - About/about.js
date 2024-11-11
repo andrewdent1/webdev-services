@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", function() {
+    if (window.location.pathname === "/Page%20-%20About/about.html") {
+        history.replaceState({}, "", "/about");
+    }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.getElementById("navbar");
     const hamburger = document.getElementById("hamburger");

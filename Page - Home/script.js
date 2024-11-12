@@ -1,9 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-    if (window.location.pathname === "/index.html") {
-        history.replaceState({}, "", "/home");
-    }
-});
-
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.getElementById("navbar");
     const hamburger = document.getElementById("hamburger");

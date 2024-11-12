@@ -1,9 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-    if (window.location.pathname === "/Page%20-%20Contact/contact.html") {
-        history.replaceState({}, "", "/contact");
-    }
-});
-
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.getElementById("navbar");
     const hamburger = document.getElementById("hamburger");

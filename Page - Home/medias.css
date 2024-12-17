@@ -54,6 +54,15 @@
     .wow-button {
         width: 40%;
     }
+
+    #portfolio-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portfolio-item {
+        scale: 0.9;
+    }
 }
 
 /* Tablet Screens (768px and below) */
@@ -86,6 +95,10 @@
         width: 50%;
         margin: 20px auto;
         margin-bottom: 50px;
+    }
+
+    .portfolio-item {
+        scale: 0.8;
     }
 }
 

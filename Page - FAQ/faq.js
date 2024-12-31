@@ -83,7 +83,7 @@ const faqs = {
         { question: "Do I keep my site if I cancel the subscription?", answer: "Yes, we offer hosting services." },
         { question: "Why custom code over Wordpress? What are the advantages?", answer: "Security, load times, maintainability, lower costs, easier to customize, less bloat because we don’t need plugins for everything. We never need to update anything like you need to constantly update your Wordpress version - otherwise you get hacked and your site redirects to a Chinese gambling site. To go into more detail about security, our custom coded sites have no databases or anything so there’s nothing to hack. Our sites are more secure without needing constant updates to be on top of or constant attacks from online hackers trying to barge in. There's nowhere for them to barge into on our sites no matter how hard they try." },
         { question: "Do I own my domain?", answer: "Yes, you will always own your domain." },
-        { question: "How can I request edits for my site?", answer: "You send an email to dentdrew@gmail.com and it will go into our ticketing system where I and my team can read and fulfill them and mark as solved." },
+        { question: "How can I request edits for my site?", answer: "You send an email to andrew@spacecoastwebdev.com and it will go into our ticketing system where I and my team can read and fulfill them and mark as solved." },
     ]
 };
 
